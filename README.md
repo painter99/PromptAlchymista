@@ -176,7 +176,7 @@ Cílem je vytvořit nástroj a přístup, který může pomoci zefektivnit a zkv
 <a id="licence"></a>
 ## 📜 Licence
 
-PromptAlchymista (jako koncept, tento dokument a související systémové prompty poskytnuté autorem) je poskytován pod licencí **MIT**. Autorská práva `Copyright (c) 2024 painter99`. Podrobnosti naleznete v souboru `LICENSE` (pokud jej plánujete přidat).
+PromptAlchymista (jako koncept, tento dokument a související systémové prompty poskytnuté autorem) je poskytován pod licencí **MIT**. Autorská práva `Copyright (c) 2025 painter99`. Podrobnosti naleznete v souboru `LICENSE`.
 
 ---
 
