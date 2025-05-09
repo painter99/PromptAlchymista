@@ -104,7 +104,7 @@ Zprovoznění PromptAlchymisty v prostředí Claude (na webu `claude.ai`) je sna
     *   V uživatelském rozhraní Claude (typicky v levém menu) zvolte možnost **"Projekty"**.
     *   Vytvořte **"Nový projekt"**. Můžete jej pojmenovat například `PromptAlchymista_Test` nebo dle vaší preference a projekt uložte.
     *   Do nově vytvořeného projektu **vložte systémové instrukce**. Najděte pole určené pro instrukce označené jako "Project instructions" či "Custom Instructions" nebo podobné označení.
-    *   **Zkopírujte celý obsah souboru `PromptAlchymista.xml`** a vložte jej do tohoto pole pro systémové instrukce.
+    *   **Zkopírujte celý obsah souboru [`PromptAlchymista.xml`](https://github.com/painter99/PromptAlchymista/releases)** a vložte jej do tohoto pole pro systémové instrukce.
 
 2.  **Zajištění potřebných nástrojů modelu:**
     *   Ujistěte se, že v rámci nastavení tohoto projektu má model Claude povolený **přístup k internetu (web search tool)**. PromptAlchymista tento nástroj vyžaduje pro svou funkci dynamické aktualizace znalostí.
