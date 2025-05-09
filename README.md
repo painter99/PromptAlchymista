@@ -10,19 +10,19 @@
 
 ## 📚 Obsah
 
-- [Co je PromptAlchymista?](#co-je-promptalchymista)
-- [Klíčové vlastnosti](#klíčové-vlastnosti)
-- [Základní filozofie](#základní-filozofie)
-- [Jak PromptAlchymista funguje?](#jak-promptalchymista-funguje)
+- - [Co je PromptAlchymista?](#co-je-promptalchymista)
+- - [Klíčové vlastnosti](#klíčové-vlastnosti)
+- - [Základní filozofie](#základní-filozofie)
+- - [Jak PromptAlchymista funguje?](#jak-promptalchymista-funguje)
 -   - [Dynamická aktualizace znalostí](#dynamická-aktualizace-znalostí)
 -   - [Strukturální design pomocí XML](#strukturální-design-pomocí-xml)
 -   - [Adaptivní přístup](#adaptivní-přístup)
-- [Pro koho je určen?](#pro-koho-je-určen)
-- [Doporučení pro nasazení a testování](#doporučení-pro-nasazení-a-testování)
-- [Příklad interakce (zjednodušeně)](#příklad-interakce-zjednodušeně)
-- [Aktuální stav (Alpha) a další kroky](#aktuální-stav-alpha-a-další-kroky)
-- [Zapojte se do diskuse!](#zapojte-se-do-diskuse)
-- [Licence](#licence)
+- - [Pro koho je určen?](#pro-koho-je-určen)
+- - [Doporučení pro nasazení a testování](#doporučení-pro-nasazení-a-testování)
+- - [Příklad interakce (zjednodušeně)](#příklad-interakce-zjednodušeně)
+- - [Aktuální stav (Alpha) a další kroky](#aktuální-stav-alpha-a-další-kroky)
+- - [Zapojte se do diskuse!](#zapojte-se-do-diskuse)
+- - [Licence](#licence)
 
 ## 🧪 Co je PromptAlchymista?
 
