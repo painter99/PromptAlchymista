@@ -2,7 +2,7 @@
 
 ![Verze](https://img.shields.io/badge/verze-v0.1.2--alpha-orange) ![Licence](https://img.shields.io/badge/licence-MIT-green) ![Testováno na](https://img.shields.io/badge/Claude%203.7%20Sonnet%20(s%20thinking%20%26%20web)-optimalizováno-purple)
 
-![](https://komarev.com/ghpvc/?username=painter99&color=blue&style=flat-square)
+![](https://komarev.com/ghpvc/?username=painter99/PromptAlchymista&color=blue&style=flat-square)
 
 <p align="center">
   <em>Experimentální systémový prompt pro AI asistenta, zaměřený na tvorbu, analýzu a optimalizaci LLM promptů.</em>
