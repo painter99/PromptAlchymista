@@ -1,6 +1,6 @@
 # PromptAlchymista ⚗️
 
-![Verze](https://img.shields.io/badge/verze-v0.1.2--alpha-orange) ![Licence](https://img.shields.io/badge/licence-MIT-green) ![Testováno na](https://img.shields.io/badge/Claude%203.7%20Sonnet%20(s%20thinking%20%26%20web)-optimalizováno-purple)
+![Verze](https://img.shields.io/badge/verze-alpha-orange) ![Licence](https://img.shields.io/badge/licence-MIT-green) ![Testováno na](https://img.shields.io/badge/Claude%203.7%20Sonnet%20(s%20thinking%20%26%20web)-optimalizováno-purple)
 
 <p align="center">
   <em>Experimentální systémový prompt pro AI asistenta, zaměřený na tvorbu, analýzu a optimalizaci LLM promptů.</em>
@@ -31,7 +31,7 @@
 
 Jedná se o **prototyp**, který zkoumá možnosti automatizovanějšího a systematičtějšího přístupu k prompt engineeringu, se zvláštním zaměřením na **vývoj robustních systémových promptů**.
 
-Aktuálně je projekt ve fázi **Alpha (verze v0.1.2-alpha)** a je primárně testován v prostředí **Claude 3.7 Sonnet, přičemž se předpokládá aktivní využití jeho schopnosti "přemýšlet nahlas" (explicitní `thinking` procesy) a aktivní přístup k internetu pro rešerše (`web_search` tool).** Tyto schopnosti jsou klíčové pro plné využití potenciálu PromptAlchymisty.
+Aktuálně je projekt ve fázi **Alpha** a je primárně testován v prostředí **Claude 3.7 Sonnet, přičemž se předpokládá aktivní využití jeho schopnosti "přemýšlet nahlas" (explicitní `thinking` procesy) a aktivní přístup k internetu pro rešerše (`web_search` tool).** Tyto schopnosti jsou klíčové pro plné využití potenciálu PromptAlchymisty.
 
 <a id="klicove-vlastnosti"></a>
 ## ✨ Klíčové vlastnosti
@@ -150,7 +150,7 @@ Toto jsou principy, které jsem aplikoval:
 <a id="aktualni-stav-alpha-a-dalsi-kroky"></a>
 ## 🧭 Aktuální stav (Alpha) a další kroky
 
-PromptAlchymista je aktuálně v **Alpha fázi (verze v0.1.2-alpha)**. To znamená:
+PromptAlchymista je aktuálně v **Alpha fázi**. To znamená:
 
 *   Základní koncept a klíčové mechanismy jsou implementovány v systémovém promptu.
 *   Probíhá aktivní testování, zejména s modelem **Claude 3.7 Sonnet** za výše uvedených podmínek.
