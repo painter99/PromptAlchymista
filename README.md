@@ -106,7 +106,7 @@ Zprovoznění PromptAlchymisty v prostředí Claude (na webu `claude.ai`) je sna
     *   Do nově vytvořeného projektu **vložte systémové instrukce**. Najděte pole určené pro instrukce označené jako "Project instructions" či "Custom Instructions" nebo podobné označení.
     *   **Zkopírujte celý obsah souboru [`PromptAlchymista.xml`](https://github.com/painter99/PromptAlchymista/releases)** a vložte jej do tohoto pole pro systémové instrukce.
 
-.  **Zajištění potřebných nástrojů modelu:**
+2.  **Zajištění potřebných nástrojů modelu:**
     *   Ujistěte se, že v rámci nastavení tohoto projektu má model Claude povolený **přístup k internetu (web search tool)**. PromptAlchymista tento nástroj vyžaduje pro svou funkci dynamické aktualizace znalostí.
     *   Ověřte, zda nastavení projektu umožňuje modelu využívat jeho schopnost strukturovaného přemýšlení (což PromptAlchymista podporuje např. interním očekáváním ohledně `<thinking>` tagů, pokud je model používá).
 
@@ -122,7 +122,7 @@ Zprovoznění PromptAlchymisty v prostředí Claude (na webu `claude.ai`) je sna
 Kromě základního nasazení v Claude zvažte při testování PromptAlchymisty i následující:
 
 *   **Testování s různými LLM:** Ačkoliv je primárně optimalizován s ohledem na Claude, vyzkoušejte chování PromptAlchymisty i s jinými modely (např. GPT, Gemini). To vám pomůže identifikovat univerzální principy versus modelově specifické chování.
-*   **Google AI Studio (např. s Gemini .5 Pro):**
+*   **Google AI Studio (např. s Gemini 2.5 Pro):**
     *   Při testování s modely Gemini v AI Studiu **doporučuji aktivovat funkci "Grounding" (uzemnění) s přístupem k Google Search.** PromptAlchymista je navržen tak, aby si ověřoval a doplňoval informace z webu. Grounding pomůže modelu Gemini lépe plnit instrukce týkající se rešerší, omezit případné halucinace a zajistit, že odpovědi jsou založeny na aktuálních datech. Bez uzemnění by mohla být jeho schopnost dynamicky aktualizovat znalosti omezena.
 *   **Sledování kvality rešerší:** Věnujte pozornost tomu, jaké informace Alchymista nachází během své inicializační i proaktivní rešerše. Jsou zdroje skutečně relevantní a autoritativní?
 *   **Variabilita vstupních promptů:** Testujte Alchymistu s různě komplexními a různě formulovanými uživatelskými prompty, abyste ověřili jeho adaptabilitu.
