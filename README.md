@@ -13,9 +13,9 @@
 - [Klíčové vlastnosti](#klicove-vlastnosti)
 - [Základní filozofie](#zakladni-filozofie)
 - [Jak PromptAlchymista funguje?](#jak-promptalchymista-funguje)
-  - [Dynamická aktualizace znalostí](#dynamicka-aktualizace-znalosti)
+  - [Dynamická aktualizace znalostí (Inicializační Protokol)](#dynamicka-aktualizace-znalosti-inicializacni-protokol)
   - [Strukturální design pomocí XML](#strukturalni-design-pomoci-xml)
-  - [Adaptivní přístup](#adaptivni-pristup)
+  - [Adaptivní přístup a Pokročilé Cykly](#adaptivni-pristup-a-pokrocile-cykly)
 - [Pro koho je určen?](#pro-koho-je-urcen)
 - [Jak začít s PromptAlchymistou v Claude](#jak-zacit-s-promptalchymistou-v-claude)
 - [Doporučení pro pokročilejší testování](#doporuceni-pro-pokrocilejsi-testovani)
@@ -29,60 +29,66 @@
 
 **PromptAlchymista ⚗️** je pokročilý **systémový prompt** navržený pro AI asistenty (jako je Claude od Anthropic). Jeho hlavním cílem je pomáhat uživatelům – od začátečníků po experty – s **tvorbou, analýzou, refaktoringem a optimalizací promptů** pro velké jazykové modely (LLM).
 
-Jedná se o **prototyp**, který zkoumá možnosti automatizovanějšího a systematičtějšího přístupu k prompt engineeringu, se zvláštním zaměřením na **vývoj robustních systémových promptů**.
+Jedná se o **prototyp**, který zkoumá možnosti automatizovanějšího a systematičtějšího přístupu k prompt engineeringu, se zvláštním zaměřením na **vývoj robustních a efektivních systémových promptů**.
 
 Aktuálně je projekt ve fázi **Alpha** a je primárně testován v prostředí **Claude 3.7 Sonnet, přičemž se předpokládá aktivní využití jeho schopnosti "přemýšlet nahlas" (explicitní `thinking` procesy) a aktivní přístup k internetu pro rešerše (`web_search` tool).** Tyto schopnosti jsou klíčové pro plné využití potenciálu PromptAlchymisty.
 
 <a id="klicove-vlastnosti"></a>
 ## ✨ Klíčové vlastnosti
 
-*   **Inteligentní aktualizace znalostí:** Automaticky si doplňuje nejnovější poznatky z prompt engineeringu pomocí řízených webových rešerší.
-*   **Optimalizace pro různé LLM:** Poskytuje rady s ohledem na specifika modelů jako Claude, GPT a Gemini.
-*   **Strukturální design pomocí XML:** Využívá XML pro lepší srozumitelnost a kontrolu promptů, zejména pro Claude.
-*   **Etický design promptů:** Aktivně zohledňuje etické aspekty a prevenci nežádoucího chování AI.
-*   **Adaptivní komunikace:** Přizpůsobuje komplexitu vysvětlení úrovni znalostí uživatele.
-*   **Generování praktických příkladů:** Nabízí ukázky použití navržených promptů.
-*   **Tokenová efektivita:** Pomáhá vytvářet prompty, které jsou účinné a zároveň šetří tokeny.
-*   **Autonomní návrh řešení:** Snaží se minimalizovat zbytečné dotazy a proaktivně navrhovat optimální řešení.
+*   **Robustní Aktualizace Znalostí:** Automaticky provádí řízenou rešerši nejnovějších trendů v prompt engineeringu při každém startu.
+*   **Optimalizace pro Různé LLM:** Poskytuje rady s ohledem na specifika modelů jako Claude, GPT a Gemini.
+*   **Strukturální Design Pomocí XML:** Využívá XML pro lepší srozumitelnost a kontrolu promptů, zejména pro Claude.
+*   **Integrovaná Etika:** Aktivně zohledňuje etické aspekty a prevenci nežádoucího chování AI.
+*   **Adaptivní Komunikace:** Přizpůsobuje komplexitu vysvětlení úrovni znalostí uživatele.
+*   **Praktické Příklady:** Nabízí ukázky použití navržených promptů.
+*   **Tokenová Efektivita:** Pomáhá vytvářet účinné prompty optimalizované na délku; současná verze je výrazně tokenově úspornější než rané iterace.
+*   **Autonomní Návrh:** Snaží se minimalizovat dotazy a proaktivně navrhovat optimální řešení.
+*   **Pokročilé Optimalizační Cykly:** Zahrnuje mechanismy pro meta-prompting, simulaci RLHF a evaluaci variant.
 
 <a id="zakladni-filozofie"></a>
 ## 💡 Základní filozofie
 
 PromptAlchymista se řídí několika klíčovými principy:
 
-1.  **Jednoznačnost a Explicitnost:** Každá instrukce v promptu musí být co nejjasnější.
+1.  **Jednoznačnost a Explicitnost:** Každá instrukce musí být co nejjasnější.
 2.  **Efektivita a Optimalizace:** Hledání rovnováhy mezi délkou promptu, jeho účinností a náklady.
 3.  **Adaptabilita:** Rozlišování univerzálních principů od specifik jednotlivých modelů.
 4.  **Struktura pro Srozumitelnost:** Využití formátování (zejména XML) pro lepší kontrolu AI.
 5.  **Zodpovědnost a Etika:** Integrace etických ohledů do každého návrhu.
-6.  **Neustálé Učení:** Dynamické získávání a aplikace nejnovějších poznatků v oboru.
-7.  **Praktická Pomoc:** Poskytování srozumitelných a použitelných výsledků.
+6.  **Edukace a Adaptivní Komunikace:** Přizpůsobení hloubky vysvětlení.
+7.  **Proaktivita a Autonomie:** Samostatné jednání, minimalizace dotazů, řešení nejasností.
+8.  **Systematičnost a Verzování:** Systematická práce a dokumentace rozhodnutí.
 
 <a id="jak-promptalchymista-funguje"></a>
 ## ⚙️ Jak PromptAlchymista funguje?
 
 PromptAlchymista není samostatná aplikace, ale **komplexní systémový prompt**, který definuje chování, znalosti a pracovní postupy AI asistenta. Jeho klíčové mechanismy zahrnují:
 
-<a id="dynamicka-aktualizace-znalosti"></a>
-### Dynamická aktualizace znalostí
+<a id="dynamicka-aktualizace-znalosti-inicializacni-protokol"></a>
+### Dynamická aktualizace znalostí (Inicializační Protokol)
 
-Na začátku každé konverzace provede Alchymista inteligentní dvoufázový rešeršní proces:
-1.  **Identifikuje globální trendy:** Provede rešerši nejnovějších "best practices" v prompt engineeringu.
-2.  **Cílené hloubkové ponory:** Na základě zjištěných trendů provede 3 další rešerše zaměřené na specifické, aktuálně nejrelevantnější oblasti.
-Tento proces využívá **výhradně anglické, autoritativní zdroje (oficiální dokumentace, výzkumné publikace, uznávané blogy expertů) staré maximálně 1-9 měsíců**, což zajišťuje, že jeho rady jsou postaveny na čerstvých a ověřených informacích. **Pro tento mechanismus je nezbytný aktivní přístup AI k internetu (nástroj pro web search).**
+Na začátku každé konverzace **automaticky a povinně** provede Alchymista spolehlivý dvoufázový rešeršní proces:
+1.  **Identifikuje 3 globální trendy:** Provede rešerši nejnovějších "best practices" v prompt engineeringu.
+2.  **Cílené hloubkové ponory:** Na základě zjištěných trendů provede další 3 rešerše zaměřené na specifické, aktuálně nejrelevantnější oblasti.
+Tento proces využívá **výhradně anglické, autoritativní zdroje (vědecké pub. > oficiální doc. > renomované blogy) staré maximálně 1-9 měsíců** a má **vestavěný kontrolní mechanismus**, který brání odpovědi před dokončením rešerše. Tím je zajištěno, že rady jsou vždy aktuální. **Pro tento mechanismus je nezbytný aktivní přístup AI k internetu (nástroj pro web search).**
 
 <a id="strukturalni-design-pomoci-xml"></a>
 ### Strukturální design pomocí XML
 
-Pro zajištění maximální srozumitelnosti a kontroly, zejména u modelů jako Claude, PromptAlchymista doporučuje a využívá **XML tagy** pro strukturování jednotlivých částí promptu (např. definice role, instrukce, příklady, formát výstupu).
+Pro zajištění maximální srozumitelnosti a kontroly, zejména u modelů jako Claude, PromptAlchymista doporučuje a využívá **XML tagy** pro strukturování jednotlivých částí promptu (např. definice role, instrukce, příklady, formát výstupu). Aktuální verze zachovává všechny klíčové strukturální sekce pro zajištění funkční kompletnosti.
 
-<a id="adaptivni-pristup"></a>
-### Adaptivní přístup
+<a id="adaptivni-pristup-a-pokrocile-cykly"></a>
+### Adaptivní přístup a Pokročilé Cykly
 
 PromptAlchymista je navržen tak, aby:
 *   Minimalizoval zbytečné dotazy na uživatele.
 *   Odhadl úroveň znalostí uživatele a přizpůsobil tomu komplexitu svých vysvětlení.
 *   Proaktivně navrhoval řešení a jasně komunikoval své předpoklady.
+*   **Systematicky využíval definované pokročilé cykly** (pokud je to relevantní pro úkol):
+    *   **Meta-Prompting:** Autonomní cyklus (generuj -> kritizuj -> vylepši) pro komplexní návrhy.
+    *   **RLHF-inspirovaný Feedback Loop:** Mechanismus pro systematické získávání a aplikaci uživatelské zpětné vazby.
+    *   **Optimalizační a Evaluační Cyklus:** Proces pro generování a hodnocení variant promptů.
 *   U modelů, které to podporují (jako Claude s `<thinking>` tagy), může využívat explicitní "přemýšlení nahlas" pro komplexnější analýzy.
 
 <a id="pro-koho-je-urcen"></a>
@@ -101,67 +107,62 @@ PromptAlchymista může být užitečný pro:
 Zprovoznění PromptAlchymisty v prostředí Claude (na webu `claude.ai`) je snadné. Postupujte podle následujících kroků:
 
 1.  **Vytvoření a nastavení projektu:**
-    *   V uživatelském rozhraní Claude (typicky v levém menu) zvolte možnost **"Projekty"**.
-    *   Vytvořte **"Nový projekt"**. Můžete jej pojmenovat například `PromptAlchymista_Test` nebo dle vaší preference a projekt uložte.
-    *   Do nově vytvořeného projektu **vložte systémové instrukce**. Najděte pole určené pro instrukce označené jako "Project instructions" či "Custom Instructions" nebo podobné označení.
-    *   **Zkopírujte celý obsah souboru [`PromptAlchymista.xml`](https://github.com/painter99/PromptAlchymista/releases)** a vložte jej do tohoto pole pro systémové instrukce.
+    *   V uživatelském rozhraní Claude zvolte **"Projekty"**.
+    *   Vytvořte **"Nový projekt"** (např. `PromptAlchymista_Test`).
+    *   Do pole pro **"Project instructions"** (nebo podobné) **zkopírujte celý obsah aktuálního souboru se systémovým promptem PromptAlchymisty** (obvykle `PromptAlchymista.xml` nebo soubor odpovídající nejnovější verzi).
 
 2.  **Zajištění potřebných nástrojů modelu:**
-    *   Ujistěte se, že v rámci nastavení tohoto projektu má model Claude povolený **přístup k internetu (web search tool)**. PromptAlchymista tento nástroj vyžaduje pro svou funkci dynamické aktualizace znalostí.
-    *   Ověřte, zda nastavení projektu umožňuje modelu využívat jeho schopnost strukturovaného přemýšlení (což PromptAlchymista podporuje např. interním očekáváním ohledně `<thinking>` tagů, pokud je model používá).
+    *   Ujistěte se, že v nastavení projektu má model Claude povolený **přístup k internetu (web search tool)**. Je to **nezbytné** pro inicializační protokol Alchymisty.
+    *   Ověřte, zda nastavení umožňuje modelu využívat jeho schopnost strukturovaného přemýšlení.
 
 3.  **Zahájení konverzace:**
-    *   Jakmile máte systémový prompt nastavený v projektu, můžete zahájit konverzaci. Stačí napsat běžnou úvodní zprávu, například **pouhý pozdrav** jako "Ahoj" nebo "Dobrý den".
-    *   AI by měla následně reagovat již v roli PromptAlchymisty, připravena plnit své úkoly definované v systémovém promptu.
+    *   Napište běžnou úvodní zprávu, například **"Ahoj"**.
+    *   AI by měla reagovat již v roli PromptAlchymisty, včetně úvodního oznámení o dokončené rešerši.
 
-**Poznámka:** Přesné názvy tlačítek a umístění nastavení se mohou mírně lišit v závislosti na aktuální verzi uživatelského rozhraní platformy Claude. Klíčové je najít sekci pro správu projektů/konverzací s možností definovat trvalý systémový prompt.
+**Poznámka:** Přesné názvy tlačítek a umístění nastavení se mohou mírně lišit v závislosti na aktuální verzi uživatelského rozhraní platformy Claude.
 
 <a id="doporuceni-pro-pokrocilejsi-testovani"></a>
 ## 🛠️ Doporučení pro pokročilejší testování
 
 Kromě základního nasazení v Claude zvažte při testování PromptAlchymisty i následující:
 
-*   **Testování s různými LLM:** Ačkoliv je primárně optimalizován s ohledem na Claude, vyzkoušejte chování PromptAlchymisty i s jinými modely (např. GPT, Gemini). To vám pomůže identifikovat univerzální principy versus modelově specifické chování.
-*   **Google AI Studio (např. s Gemini 2.5 Pro):**
-    *   Při testování s modely Gemini v AI Studiu **doporučuji aktivovat funkci "Grounding" (uzemnění) s přístupem k Google Search.** PromptAlchymista je navržen tak, aby si ověřoval a doplňoval informace z webu. Grounding pomůže modelu Gemini lépe plnit instrukce týkající se rešerší, omezit případné halucinace a zajistit, že odpovědi jsou založeny na aktuálních datech. Bez uzemnění by mohla být jeho schopnost dynamicky aktualizovat znalosti omezena.
-*   **Sledování kvality rešerší:** Věnujte pozornost tomu, jaké informace Alchymista nachází během své inicializační i proaktivní rešerše. Jsou zdroje skutečně relevantní a autoritativní?
-*   **Variabilita vstupních promptů:** Testujte Alchymistu s různě komplexními a různě formulovanými uživatelskými prompty, abyste ověřili jeho adaptabilitu.
-*   **Dlouhodobé konverzace:** Sledujte, zda si Alchymista udržuje konzistenci a kvalitu odpovědí i v delších konverzacích.
+*   **Testování s různými LLM:** Ačkoliv je primárně optimalizován s ohledem na Claude, vyzkoušejte chování i s jinými modely (GPT, Gemini).
+*   **Google AI Studio (např. s Gemini Pro):**
+    *   Při testování s modely Gemini v AI Studiu **doporučuji aktivovat funkci "Grounding" s přístupem k Google Search.** PromptAlchymista je navržen tak, aby si ověřoval a doplňoval informace z webu. Grounding pomůže modelu Gemini lépe plnit instrukce týkající se rešerší.
+*   **Sledování kvality rešerší:** Věnujte pozornost tomu, jaké informace a zdroje Alchymista nachází během své inicializace. Odpovídají definovaným kritériím?
+*   **Variabilita vstupů:** Testujte Alchymistu s různě komplexními a formulovanými uživatelskými prompty.
+*   **Testování Pokročilých Cyklů:** Zadávejte úkoly, které by měly explicitně vyvolat použití Meta-Promptingu, RLHF smyčky nebo Optimalizace/Evaluace, a sledujte jejich průběh.
+*   **Dlouhodobé konverzace:** Sledujte konzistenci a kvalitu odpovědí v delších interakcích.
 
 <a id="priklad-interakce-zjednodusene"></a>
 ## 🗣️ Příklad interakce (zjednodušeně)
 
 **Uživatel:**
-"Ahoj Alchymisto, mám tento prompt pro generování popisů produktů, ale odpovědi jsou často moc obecné. Můžeš mi pomoci ho vylepšit pro model Claude Sonnet?"
-*(Následuje původní prompt uživatele)*
+"Ahoj"
 
 **PromptAlchymista (očekávaný začátek odpovědi):**
-"⚗️ Jsem PromptAlchymista. Právě jsem dokončil/a dynamickou analýzu nejnovějších trendů v prompt engineeringu... Rozumím, podíváme se na tvůj prompt pro generování popisů produktů. Nejprve provedu jeho analýzu a pak navrhnu optimalizace pro lepší specifičnost odpovědí a efektivitu pro Claude Sonnet.
-Zde je má analýza původního promptu:
-`<original_prompt_assessment>`
-...
-Navrhuji následující optimalizovanou verzi:
-`<optimized_prompt_versions>`
-...
-Toto jsou principy, které jsem aplikoval:
-`<design_rationale_and_principles_applied>`
-..."
+"⚗️ Jsem PromptAlchymista. Dokončil/a jsem dynamickou analýzu nejnovějších trendů a hloubkové rešerše. Mé poznatky jsou založeny na relevantních zdrojích publikovaných výhradně v posledních 1 až 9 měsících.
+Identifikované trendy jsou: [Stručné shrnutí 3 trendů].
+Jsem připraven/a transformovat vaše nápady v precizní prompty. Jak vám mohu dnes pomoci?"
+
+*(Následná interakce by probíhala dle standardů definovaných v promptu, např. s výstupy jako `<task_signature_definition>`, `<optimized_prompt_versions>` atd.)*
 
 <a id="aktualni-stav-alpha-a-dalsi-kroky"></a>
 ## 🧭 Aktuální stav (Alpha) a další kroky
 
 PromptAlchymista je aktuálně v **Alpha fázi**. To znamená:
 
-*   Základní koncept a klíčové mechanismy jsou implementovány v systémovém promptu.
-*   Probíhá aktivní testování, zejména s modelem **Claude 3.7 Sonnet** za výše uvedených podmínek.
-*   Mohou se vyskytovat neočekávané chování nebo oblasti pro vylepšení.
-*   Funkcionalita a formulace v systémovém promptu se mohou v budoucích iteracích měnit na základě testování a zpětné vazby.
+*   Systémový prompt implementuje všechny klíčové mechanismy včetně robustní inicializace, pokročilých cyklů a evaluačních rámců.
+*   Současná verze je výrazně tokenově optimalizovaná oproti raným iteracím při zachování funkční kompletnosti.
+*   Probíhá aktivní testování, zejména s modelem **Claude 3.7 Sonnet**.
+*   Mohou se stále vyskytovat oblasti pro další ladění a vylepšení.
+*   Funkcionalita a formulace v systémovém promptu se mohou v budoucích iteracích dále vyvíjet.
 
 Další kroky se zaměří na:
 *   Rozsáhlejší testování v různých scénářích a s různými modely.
-*   Sběr zpětné vazby od uživatelů.
-*   Postupné ladění a vylepšování jednotlivých částí systémového promptu.
-*   Zkoumání možností pro ještě pokročilejší automatizaci a analýzu.
+*   Sběr zpětné vazby od uživatelů na funkčnost a srozumitelnost.
+*   Jemné ladění formulací pro maximální efektivitu a spolehlivost.
+*   Zkoumání možností integrace dalších pokročilých technik.
 
 <a id="zapojte-se-do-diskuse"></a>
 ## 💬 Zapojte se do diskuse!
@@ -171,7 +172,7 @@ Máte nápady, postřehy, nebo jste PromptAlchymistu vyzkoušeli? Budu rád za j
 *   [Odkaz na GitHub](https://github.com/painter99/)
 *   [Odkaz na LinkedIn](https://www.linkedin.com/in/pavel-mares-p99/)
 
-Cílem je vytvořit nástroj a přístup, který může pomoci zefektivnit a zkvalitnit práci s LLM, a možná inspirovat další vývoj v této fascinující oblasti.
+Cílem je vytvořit nástroj a přístup, který může pomoci zefektivnit a zkvalitnit práci s LLM.
 
 <a id="licence"></a>
 ## 📜 Licence
