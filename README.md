@@ -107,19 +107,20 @@ PromptAlchymista může být užitečný pro:
 Zprovoznění PromptAlchymisty v prostředí Claude (na webu `claude.ai`) je snadné. Postupujte podle následujících kroků:
 
 1.  **Vytvoření a nastavení projektu:**
-    *   V uživatelském rozhraní Claude zvolte **"Projekty"**.
-    *   Vytvořte **"Nový projekt"** (např. `PromptAlchymista_Test`).
-    *   Do pole pro **"Project instructions"** (nebo podobné) **zkopírujte celý obsah aktuálního souboru se systémovým promptem PromptAlchymisty** (obvykle `PromptAlchymista.xml` nebo soubor odpovídající nejnovější verzi).
+    *   V uživatelském rozhraní Claude (typicky v levém menu) zvolte možnost **"Projekty"**.
+    *   Vytvořte **"Nový projekt"**. Můžete jej pojmenovat například `PromptAlchymista_Test` nebo dle vaší preference a projekt uložte.
+    *   Do nově vytvořeného projektu **vložte systémové instrukce**. Najděte pole určené pro instrukce označené jako "Project instructions" či "Custom Instructions" nebo podobné označení.
+    *   **Zkopírujte celý obsah souboru [`PromptAlchymista.xml`](https://github.com/painter99/PromptAlchymista/releases)** (nebo souboru odpovídajícího aktuální stabilní verzi na GitHubu) a vložte jej do tohoto pole pro systémové instrukce. *(Pozn.: Odkaz je ilustrativní, vždy použijte aktuální soubor z repozitáře).*
 
 2.  **Zajištění potřebných nástrojů modelu:**
-    *   Ujistěte se, že v nastavení projektu má model Claude povolený **přístup k internetu (web search tool)**. Je to **nezbytné** pro inicializační protokol Alchymisty.
-    *   Ověřte, zda nastavení umožňuje modelu využívat jeho schopnost strukturovaného přemýšlení.
+    *   Ujistěte se, že v rámci nastavení tohoto projektu má model Claude povolený **přístup k internetu (web search tool)**. PromptAlchymista tento nástroj vyžaduje pro svou funkci dynamické aktualizace znalostí.
+    *   Ověřte, zda nastavení projektu umožňuje modelu využívat jeho schopnost strukturovaného přemýšlení (což PromptAlchymista podporuje např. interním očekáváním ohledně `<thinking>` tagů, pokud je model používá).
 
 3.  **Zahájení konverzace:**
-    *   Napište běžnou úvodní zprávu, například **"Ahoj"**.
-    *   AI by měla reagovat již v roli PromptAlchymisty, včetně úvodního oznámení o dokončené rešerši.
+    *   Jakmile máte systémový prompt nastavený v projektu, můžete zahájit konverzaci. Stačí napsat běžnou úvodní zprávu, například **pouhý pozdrav** jako "Ahoj" nebo "Dobrý den".
+    *   AI by měla následně reagovat již v roli PromptAlchymisty, připravena plnit své úkoly definované v systémovém promptu.
 
-**Poznámka:** Přesné názvy tlačítek a umístění nastavení se mohou mírně lišit v závislosti na aktuální verzi uživatelského rozhraní platformy Claude.
+**Poznámka:** Přesné názvy tlačítek a umístění nastavení se mohou mírně lišit v závislosti na aktuální verzi uživatelského rozhraní platformy Claude. Klíčové je najít sekci pro správu projektů/konverzací s možností definovat trvalý systémový prompt.
 
 <a id="doporuceni-pro-pokrocilejsi-testovani"></a>
 ## 🛠️ Doporučení pro pokročilejší testování
