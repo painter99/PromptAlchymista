@@ -141,7 +141,7 @@ PromptAlchymista je primárně navržen pro modely s pokročilými schopnostmi, 
 1.  **Vytvoření nového promptu:**
     *   Přejděte do Google AI Studio a vytvořte nový "Freeform" prompt.
 2.  **Vložení systémových instrukcí:**
-    *   Zkopírujte celý obsah souboru [`1.0.0-gemini-2.5-flash-thinking-rc1.xml`](https://github.com/painter99/PromptAlchymista/releases/download/v1.0.0-gemini-2.5-flash-thinking-rc1/1.0.0-gemini-2.5-flash-thinking-rc1.xml) a vložte jej do textového pole pro prompt.
+    *   Zkopírujte celý obsah souboru [`1.0.0-gemini-2.5-flash-thinking-rc1.xml`](https://github.com/painter99/PromptAlchymista/releases/download/v1.0.0-gemini-2.5-flash-thinking-rc1/1.0.0-gemini-2.5-flash-thinking-rc1.xml) a vložte jej do textového pole pro `System instruction`.
 3.  **Výběr a konfigurace modelu:**
     *   V nastavení modelu (obvykle v pravém panelu) vyberte model **`Gemini 2.5 Flash`** (nebo novější verzi `Gemini x.x Flash`, pokud je dostupná).
     *   **Doporučuji aktivovat funkci "Grounding" s přístupem k Google Search.** PromptAlchymista vyžaduje přístup k aktuálním informacím pro svůj inicializační protokol a průběžné rešerše.
