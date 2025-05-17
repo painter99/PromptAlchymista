@@ -32,9 +32,9 @@
 
 **PromptAlchymista ⚗️** je komplexní **systémový prompt** navržený pro pokročilé AI modely, primárně optimalizovaný pro **Google Gemini 2.5 Flash**. Jeho hlavním posláním je asistovat uživatelům – od začátečníků po experty – s **tvorbou, analýzou, refaktoringem a optimalizací promptů** pro velké jazykové modely (LLM).
 
-PromptAlchymista se vyvinul z experimentálního prototypu ve fázi Alpha do současné verze Release Candidate (v1.0.0-rc1), která představuje robustní a referenční implementaci. Zatímco rané verze byly primárně testovány a laděny na modelech Claude, **aktuální verze je cíleně optimalizována pro využití unikátních schopností Google Gemini 2.5 Flash**, jako je Controllable Reasoning a nativní Multimodalita.
+PromptAlchymista se vyvinul z experimentálního prototypu ve fázi Alpha do současné verze Release Candidate (v1.0.0-rc1), která představuje robustní a referenční implementaci. Zatímco rané verze byly primárně testovány a laděny na modelech Claude, **aktuální verze je cíleně optimalizována pro využití unikátních schopností Google Gemini 2.5 Flash**, jako je Controllable Reasoning, nativní Multimodalita, velké kontextové okno - 1M tokenů, neomezené a bezplatné testování v Google AI Studio.
 
-Jedná se o **prototyp a referenční implementaci**, která zkoumá a demonstruje možnosti systematického, daty podloženého a vysoce optimalizovaného přístupu k prompt engineeringu. Klade důraz na **vývoj robustních, efektivních a eticky zodpovědných promptů**, které jsou připraveny i na **produkční nasazení**.
+Jedná se o **prototyp a referenční implementaci**, která zkoumá a demonstruje možnosti systematického a vysoce optimalizovaného přístupu k prompt engineeringu. Klade důraz na **vývoj robustních, efektivních a eticky zodpovědných promptů**.
 
 Aktuálně je projekt ve fázi **Release Candidate (v1.0.0-rc1)** a je primárně testován a optimalizován v prostředí **Google AI Studio s modelem Gemini 2.5 Flash**. Plné využití potenciálu PromptAlchymisty vyžaduje model s pokročilými schopnostmi uvažování (jako je Controllable Reasoning u Gemini 2.5 Flash), dlouhým kontextem, multimodalitou a schopností provádět webové rešerše.
 
