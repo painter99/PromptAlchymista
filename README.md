@@ -1,6 +1,6 @@
 # PromptAlchymista ⚗️
 
-![Verze](https://img.shields.io/badge/verze-1.0.0--rc1-blue) ![Licence](https://img.shields.io/badge/licence-MIT-green) ![Optimalizováno pro](https://img.shields.io/badge/Gemini%202.5%20Flash%20(s%20thinking%20%26%20multimodality)-prim%C3%A1rn%C4%9B-purple)
+![Verze](https://img.shields.io/badge/verze-1.0.0--rc1-blue) ![Licence](https://img.shields.io/badge/licence-MIT-green) ![Optimalizováno pro](https://img.shields.io/badge/Gemini%202.5%20Flash%20-prim%C3%A1rn%C4%9B-purple)
 
 <p align="center">
   <em>Elitní AI prompt engineer a stratég v podobě komplexního systémového promptu, optimalizovaný pro Google Gemini 2.5 Flash. Zaměřený na tvorbu, analýzu a optimalizaci LLM promptů s důrazem na přesnost, efektivitu, etiku a inovaci.</em>
