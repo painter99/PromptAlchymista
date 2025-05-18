@@ -34,6 +34,8 @@
 
 Pokud by odkaz na NotebookLM nefungoval, nebo si přejete soubor stáhnout přímo, můžete tak učinit [zde](https://github.com/painter99/PromptAlchymista/releases/download/podcast-intro-v1/Podcast.PromptAlchymista.Intro.wav) (formát WAV).
 
+---
+
 **PromptAlchymista ⚗️** je komplexní **systémový prompt** navržený pro pokročilé AI modely, primárně optimalizovaný pro **Google Gemini 2.5 Flash**. Jeho hlavním posláním je asistovat uživatelům – od začátečníků po experty – s **tvorbou, analýzou, refaktoringem a optimalizací promptů** pro velké jazykové modely (LLM).
 
 PromptAlchymista se vyvinul z experimentálního prototypu ve fázi Alpha do současné verze Release Candidate (v1.0.0-rc1), která představuje robustní a referenční implementaci. Zatímco rané verze byly primárně testovány a laděny na modelech Claude, **aktuální verze je cíleně optimalizována pro využití unikátních schopností Google Gemini 2.5 Flash**, jako je Controllable Reasoning, nativní Multimodalita, velké kontextové okno - 1M tokenů, neomezené a bezplatné testování v Google AI Studio.
