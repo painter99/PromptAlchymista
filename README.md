@@ -30,14 +30,7 @@
 <a id="co-je-promptalchymista"></a>
 ## 🧪 Co je PromptAlchymista?
 
-<details>
-  <summary>🎙️ Poslechněte si úvod k PromptAlchymistovi (Podcast)</summary>
-  <p>
-    <audio controls style="width: 100%;">
-      Podcast si můžete poslechnout nebo stáhnout <a href="https://notebooklm.google.com/notebook/28c6ba87-8a6f-423e-a72b-3a5562b0bc4a/audio">zde</a>.
-    </audio>
-  </p>
-</details>
+🎧 Poslechněte si úvod k PromptAlchymistovi: [![Play Icon](https://img.shields.io/badge/-Podcast-red?style=flat-square&logo=google-podcasts&logoColor=white)](https://notebooklm.google.com/notebook/28c6ba87-8a6f-423e-a72b-3a5562b0bc4a/audio)
 
 **PromptAlchymista ⚗️** je komplexní **systémový prompt** navržený pro pokročilé AI modely, primárně optimalizovaný pro **Google Gemini 2.5 Flash**. Jeho hlavním posláním je asistovat uživatelům – od začátečníků po experty – s **tvorbou, analýzou, refaktoringem a optimalizací promptů** pro velké jazykové modely (LLM).
 
