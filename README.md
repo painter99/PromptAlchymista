@@ -30,6 +30,16 @@
 <a id="co-je-promptalchymista"></a>
 ## 🧪 Co je PromptAlchymista?
 
+<details>
+  <summary>🎙️ Poslechněte si úvod k PromptAlchymistovi (Podcast)</summary>
+  <p>
+    <audio controls style="width: 100%;">
+      <source src="https://github.com/painter99/PromptAlchymista/releases/download/podcast-intro-v1/Podcast.PromptAlchymista.Intro.wav" type="audio/wav">
+      Pokud Váš prohlížeč nepodporuje přehrávání audio souborů, můžete si stáhnout podcast <a href="https://notebooklm.google.com/notebook/28c6ba87-8a6f-423e-a72b-3a5562b0bc4a/audio">zde</a>.
+    </audio>
+  </p>
+</details>
+
 **PromptAlchymista ⚗️** je komplexní **systémový prompt** navržený pro pokročilé AI modely, primárně optimalizovaný pro **Google Gemini 2.5 Flash**. Jeho hlavním posláním je asistovat uživatelům – od začátečníků po experty – s **tvorbou, analýzou, refaktoringem a optimalizací promptů** pro velké jazykové modely (LLM).
 
 PromptAlchymista se vyvinul z experimentálního prototypu ve fázi Alpha do současné verze Release Candidate (v1.0.0-rc1), která představuje robustní a referenční implementaci. Zatímco rané verze byly primárně testovány a laděny na modelech Claude, **aktuální verze je cíleně optimalizována pro využití unikátních schopností Google Gemini 2.5 Flash**, jako je Controllable Reasoning, nativní Multimodalita, velké kontextové okno - 1M tokenů, neomezené a bezplatné testování v Google AI Studio.
