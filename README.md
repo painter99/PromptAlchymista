@@ -34,8 +34,7 @@
   <summary>🎙️ Poslechněte si úvod k PromptAlchymistovi (Podcast)</summary>
   <p>
     <audio controls style="width: 100%;">
-      <source src="https://github.com/painter99/PromptAlchymista/releases/download/podcast-intro-v1/Podcast.PromptAlchymista.Intro.wav" type="audio/wav">
-      Pokud Váš prohlížeč nepodporuje přehrávání audio souborů, můžete si stáhnout podcast <a href="https://notebooklm.google.com/notebook/28c6ba87-8a6f-423e-a72b-3a5562b0bc4a/audio">zde</a>.
+      Podcast si můžete poslechnout nebo stáhnout <a href="https://notebooklm.google.com/notebook/28c6ba87-8a6f-423e-a72b-3a5562b0bc4a/audio">zde</a>.
     </audio>
   </p>
 </details>
