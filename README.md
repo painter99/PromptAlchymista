@@ -53,7 +53,7 @@ Aktuálně je projekt ve fázi **Release Candidate (v1.0.0-rc1)** a je primárn�
 <a id="motivace-a-cesta"></a>
 ## 🧠 Motivace a cesta k PromptAlchymistovi
 
-Motivace pro vznik PromptAlchymisty vychází z klíčového pozorování: i dnes mnoho uživatelů interaguje s výkonnými AI modely, aniž by plně využívali jejich potenciál prostřednictvím cílené konfigurace a optimalizovaného promptingu. Z mé osobní zkušenosti s testováním modelů (jako byl v listopadu 2024 Claude 3.5 Sonnet) jsem brzy pochopil/a, jak zásadní vliv má precizní formulace instrukcí a nastavení modelu na kvalitu a spolehlivost výstupu.
+Motivace pro vznik PromptAlchymisty vychází z klíčového pozorování: i dnes mnoho uživatelů interaguje s výkonnými AI modely, aniž by plně využívali jejich potenciál prostřednictvím cílené konfigurace a optimalizovaného promptingu. Z mé osobní zkušenosti s testováním modelů (jako byl v listopadu 2024 Claude 3.5 Sonnet) jsem brzy pochopil, jak zásadní vliv má precizní formulace instrukcí a nastavení modelu na kvalitu a spolehlivost výstupu.
 
 Toto poznání mě vedlo k vytvoření prvního miniprojektu, [AI Templates](https://github.com/painter99/ai-templates), který sloužil jako základní sada strukturovaných šablon pro testování a optimalizaci promptů.
 
