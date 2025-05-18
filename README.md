@@ -15,6 +15,7 @@
 ## 📚 Obsah
 
 - [Co je PromptAlchymista?](#co-je-promptalchymista)
+- [Motivace a cesta k PromptAlchymistovi](#motivace-a-cesta)
 - [Klíčové vlastnosti](#klicove-vlastnosti)
 - [Základní filozofie a principy](#zakladni-filozofie-a-principy)
 - [Jak PromptAlchymista funguje?](#jak-promptalchymista-funguje)
@@ -48,6 +49,17 @@ PromptAlchymista se vyvinul z experimentálního prototypu ve fázi Alpha do sou
 Jedná se o **prototyp a referenční implementaci**, která zkoumá a demonstruje možnosti systematického a vysoce optimalizovaného přístupu k prompt engineeringu. Klade důraz na **vývoj robustních, efektivních a eticky zodpovědných promptů**.
 
 Aktuálně je projekt ve fázi **Release Candidate (v1.0.0-rc1)** a je primárně testován a optimalizován v prostředí **Google AI Studio s modelem Gemini 2.5 Flash**. Plné využití potenciálu PromptAlchymisty vyžaduje model s pokročilými schopnostmi uvažování (jako je Controllable Reasoning u Gemini 2.5 Flash), dlouhým kontextem, multimodalitou a schopností provádět webové rešerše.
+
+<a id="motivace-a-cesta"></a>
+## 🧠 Motivace a cesta k PromptAlchymistovi
+
+Motivace pro vznik PromptAlchymisty vychází z klíčového pozorování: i dnes mnoho uživatelů interaguje s výkonnými AI modely, aniž by plně využívali jejich potenciál prostřednictvím cílené konfigurace a optimalizovaného promptingu. Z mé osobní zkušenosti s testováním modelů (jako byl v listopadu 2024 Claude 3.5 Sonnet) jsem brzy pochopil/a, jak zásadní vliv má precizní formulace instrukcí a nastavení modelu na kvalitu a spolehlivost výstupu.
+
+Toto poznání mě vedlo k vytvoření prvního miniprojektu, [AI Templates](https://github.com/painter99/ai-templates), který sloužil jako základní sada strukturovaných šablon pro testování a optimalizaci promptů.
+
+S rychlým pokrokem v oblasti AI, zejména s příchodem modelů s pokročilými schopnostmi uvažování ("thinking budgets") a nativním přístupem k aktuálním informacím (jako je Google Gemini 2.5 Flash), se naskytla příležitost a potřeba posunout prompt engineering na vyšší úroveň. Cílem bylo vytvořit systém, který by nebyl jen statickým souborem šablon, ale dynamickým, inteligentním a architektonicky promyšleným pomocníkem.
+
+Tak vznikl PromptAlchymista. Reprezentuje můj hlubší ponor do architektury AI instrukcí, buduje na systematickém přístupu z [AI Templates](https://github.com/painter99/ai-templates) a integruje dynamickou aktualizaci znalostí, pokročilé optimalizační cykly a specifickou optimalizaci pro nejmodernější modely. Projekt je poháněn mou vášní pro IT a AI, touhou propojovat teoretické poznatky s praktickými aplikacemi (zejména v oblastech AI testování) a přesvědčením, že robustní a efektivní prompt engineering je nezbytný pro odemknutí plného potenciálu umělé inteligence pro každého.
 
 <a id="klicove-vlastnosti"></a>
 ## ✨ Klíčové vlastnosti
