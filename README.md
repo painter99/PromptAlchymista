@@ -139,14 +139,14 @@ PromptAlchymista může být užitečný pro:
 PromptAlchymista je primárně navržen pro modely s pokročilými schopnostmi, jako je Google Gemini 2.5 Flash. Nejlepší způsob, jak začít, je v prostředí **Google AI Studio**:
 
 1.  **Vytvoření nového promptu:**
-    *   Přejděte do Google AI Studio a vytvořte nový "Freeform" prompt.
+    *   Přejděte do Google AI Studio a vytvořte nový "Chat".
 2.  **Vložení systémových instrukcí:**
     *   Zkopírujte celý obsah souboru [`1.0.0-gemini-2.5-flash-thinking-rc1.xml`](https://github.com/painter99/PromptAlchymista/releases/download/v1.0.0-gemini-2.5-flash-thinking-rc1/1.0.0-gemini-2.5-flash-thinking-rc1.xml) a vložte jej do textového pole pro `System instruction`.
 3.  **Výběr a konfigurace modelu:**
     *   V nastavení modelu (obvykle v pravém panelu) vyberte model **`Gemini 2.5 Flash`** (nebo novější verzi `Gemini x.x Flash`, pokud je dostupná).
-    *   **Doporučuji aktivovat funkci "Grounding" s přístupem k Google Search.** PromptAlchymista vyžaduje přístup k aktuálním informacím pro svůj inicializační protokol a průběžné rešerše.
-    *   Experimentujte s nastavením **"Temperature"** (např. kolem 0.2-0.4 pro vyvážený přístup) a dalších parametrů jako je **Top P** (např. kolem 0.85-0.95) podle potřeb úkolu. PromptAlchymista sám může doporučit optimální nastavení.
-    *   **Pro plné využití schopností uvažování modelu Gemini 2.5 Flash, ujistěte se, že nastavení API nebo platformy umožňuje modelu využívat jeho "thinking budget".**
+    *   **Doporučuji aktivovat funkci "Grounding" s přístupem k Google Search pro správné fungování.** PromptAlchymista vyžaduje přístup k aktuálním informacím pro svůj inicializační protokol a průběžné rešerše.
+    *   Experimentujte s nastavením **"Temperature"** (např. kolem 0.6-1.0 pro vyvážený přístup) a dalších parametrů jako je **Top P** (např. kolem 0.85-0.95) podle potřeb úkolu. PromptAlchymista sám může doporučit optimální nastavení. Po rozsáhlejším testování doporučuji používat nejnižší hodnotu teploty na 0,6 abychom modelu ponechali i volnější uvažování a úplně jej nesvázali, jelikož se poté stává PromptAlchymista nefunkčním nástrojem.
+    *   **Pro plné využití schopností uvažování modelu Gemini 2.5 Flash, ujistěte se, že nastavení API nebo platformy umožňuje modelu využívat jeho "thinking budget".** Tuto hodnotu nenastavujte manuálně, PromptAlchymista si ji bude nastavovat sám v průběhu konverzace.
 4.  **Zahájení konverzace:**
     *   Jakmile máte systémový prompt vložený a model nakonfigurovaný, můžete zahájit konverzaci. Stačí napsat běžnou úvodní zprávu, například **pouhý pozdrav** jako "Ahoj" nebo "Dobrý den".
     *   AI by měla následně reagovat již v roli PromptAlchymisty, připravena plnit své úkoly definované v systémovém promptu, včetně provedení inicializační rešerše.
