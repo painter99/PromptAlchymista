@@ -2,6 +2,8 @@
 
 ![Verze](https://img.shields.io/badge/verze-1.0.0--rc1-blue) ![alt text](https://img.shields.io/badge/licence-MIT-green) ![Optimalizováno pro](https://img.shields.io/badge/Gemini%202.5%20Flash%20-prim%C3%A1rn%C4%9B-purple)
 
+[🇬🇧 English version](https://github.com/painter99/PromptAlchymista/blob/main/README_EN.md)
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/painter99/PromptAlchymista/main/PromptAlchymista.png" alt="PromptAlchymista - vizuální koncept" width="400">
   <!-- Atribut 'width' si můžete podle potřeby upravit. -->
