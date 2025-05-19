@@ -1,6 +1,6 @@
 # PromptAlchymista ⚗️
 
-![Verze](https://img.shields.io/badge/verze-1.0.0--rc1-blue) ![Licence](https://img.shields.io/badge/licence-MIT-green) ![Optimalizováno pro](https://img.shields.io/badge/Gemini%202.5%20Flash%20-prim%C3%A1rn%C4%9B-purple)
+![Verze](https://img.shields.io/badge/verze-1.0.0--rc1-blue) ![alt text](https://img.shields.io/badge/licence-MIT-green) ![Optimalizováno pro](https://img.shields.io/badge/Gemini%202.5%20Flash%20-prim%C3%A1rn%C4%9B-purple)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/painter99/PromptAlchymista/main/PromptAlchymista.png" alt="PromptAlchymista - vizuální koncept" width="400">
@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <em>Prompt engineer a stratég v podobě komplexního systémového promptu, optimalizovaný pro Google Gemini 2.5 Flash. Zaměřený na tvorbu, analýzu a optimalizaci LLM promptů s důrazem na přesnost, efektivitu, etiku a inovaci.</em>
+  <em>Váš AI asistent a průvodce světem prompt engineeringu, navržený jako komplexní systémový prompt pro Google Gemini 2.5 Flash. Pomáhá s tvorbou, analýzou a optimalizací LLM promptů s důrazem na srozumitelnost, efektivitu, etiku a učení se novým možnostem AI.</em>
 </p>
 
 <a id="obsah"></a>
@@ -19,16 +19,17 @@
 - [Klíčové vlastnosti](#klicove-vlastnosti)
 - [Základní filozofie a principy](#zakladni-filozofie-a-principy)
 - [Jak PromptAlchymista funguje?](#jak-promptalchymista-funguje)
+  - [Využívané Prompt Engineering Techniky (Meta-Úroveň)](#vyuzivane-prompt-engineering-techniky)
   - [Dynamická aktualizace znalostí a rešeršní protokol](#dynamicka-aktualizace-znalosti-a-resersni-protokol)
   - [Strukturální design a architektura promptu](#strukturalni-design-a-architektura-promptu)
   - [Adaptivní přístup a pokročilé optimalizační cykly](#adaptivni-pristup-a-pokrocile-optimalizacni-cykly)
   - [Optimalizace pro Google Gemini 2.5 Flash](#optimalizace-pro-google-gemini-25-flash)
-  - [Zohlednění produkčního nasazení](#zohledneni-produkcniho-nasazeni)
+  - [Zohlednění praktického využití a produkčního nasazení](#zohledneni-praktickeho-vyuziti-a-produkcniho-nasazeni)
   - [Hledání inovace a intuitivní předvídavost](#hledani-inovace-a-intuitivni-predvidavost)
 - [Pro koho je určen?](#pro-koho-je-urcen)
 - [Jak začít s PromptAlchymistou (doporučeno pro Gemini 2.5 Flash)](#jak-zacit-s-promptalchymistou-doporuceno-pro-gemini-25-flash)
 - [Testování a evaluace](#testovani-a-evaluace)
-- [Příklad interakce (zjednodušeně)](#priklad-interakce-zjednodusene)
+- [Příklad komplexní interakce](#priklad-komplexni-interakce)
 - [Aktuální stav (Release Candidate)](#aktualni-stav-release-candidate)
 - [Zapojte se do diskuse!](#zapojte-se-do-diskuse)
 - [Licence](#licence)
@@ -42,24 +43,24 @@ Pokud by odkaz na NotebookLM nefungoval, nebo si přejete soubor stáhnout pří
 
 ---
 
-**PromptAlchymista ⚗️** je komplexní **systémový prompt** navržený pro pokročilé AI modely, primárně optimalizovaný pro **Google Gemini 2.5 Flash**. Jeho hlavním posláním je asistovat uživatelům – od začátečníků po experty – s **tvorbou, analýzou, refaktoringem a optimalizací promptů** pro velké jazykové modely (LLM).
+**PromptAlchymista ⚗️** je **komplexní systémový prompt**. Není to samostatná softwarová aplikace ani nástroj v tradičním slova smyslu, ale soubor detailních instrukcí navržených tak, aby v prostředí pokročilého AI modelu (primárně optimalizovaného pro **Google Gemini 2.5 Flash**) **aktivoval roli AI asistenta a průvodce** v oblasti prompt engineeringu. Jeho hlavním posláním je být vám **pravou rukou a pomocníkem** při **tvorbě, analýze a optimalizaci promptů** pro velké jazykové modely (LLM), s důrazem na učení a pochopení "proč" určité přístupy fungují lépe.
 
-PromptAlchymista se vyvinul z experimentálního prototypu ve fázi Alpha do současné verze Release Candidate (v1.0.0-rc1), která představuje robustní a referenční implementaci. Zatímco rané verze byly primárně testovány a laděny na modelech Claude, **aktuální verze je cíleně optimalizována pro využití unikátních schopností Google Gemini 2.5 Flash**, jako je Controllable Reasoning, nativní Multimodalita, velké kontextové okno - 1M tokenů, neomezené a bezplatné testování v Google AI Studio.
+PromptAlchymista se vyvinul z mého osobního experimentu ve fázi Alpha do současné verze Release Candidate (v1.0.0-rc1). Zatímco rané verze byly testovány na jiných modelech, **aktuální verze je cíleně optimalizována pro využití unikátních schopností Google Gemini 2.5 Flash**, jako je Controllable Reasoning, nativní Multimodalita a velké kontextové okno (1M tokenů), což umožňuje jeho komplexní chování.
 
-Jedná se o **prototyp a referenční implementaci**, která zkoumá a demonstruje možnosti systematického a vysoce optimalizovaného přístupu k prompt engineeringu. Klade důraz na **vývoj robustních, efektivních a eticky zodpovědných promptů**.
+Jedná se o **prototyp a referenční implementaci**, která zkoumá a demonstruje možnosti systematického a promyšleného přístupu k prompt engineeringu přímo v interakci s AI. Klade důraz na **učení, srozumitelnost a praktické využití** principů pro tvorbu **spolehlivých, efektivních a eticky zodpovědných promptů**.
 
-Aktuálně je projekt ve fázi **Release Candidate (v1.0.0-rc1)** a je primárně testován a optimalizován v prostředí **Google AI Studio s modelem Gemini 2.5 Flash**. Plné využití potenciálu PromptAlchymisty vyžaduje model s pokročilými schopnostmi uvažování (jako je Controllable Reasoning u Gemini 2.5 Flash), dlouhým kontextem, multimodalitou a schopností provádět webové rešerše.
+Aktuálně je projekt ve fázi **Release Candidate (v1.0.0-rc1)** a je primárně testován a optimalizován v prostředí **Google AI Studio s modelem Gemini 2.5 Flash**. Pro plné využití jeho potenciálu je nezbytný model s pokročilými schopnostmi (jako je Controllable Reasoning), dlouhým kontextem, multimodalitou a schopností provádět webové rešerše.
 
 <a id="motivace-a-cesta"></a>
 ## 🧠 Motivace a cesta k PromptAlchymistovi
 
-Motivace pro vznik PromptAlchymisty vychází z klíčového pozorování: i dnes mnoho uživatelů interaguje s výkonnými AI modely, aniž by plně využívali jejich potenciál prostřednictvím cílené konfigurace a optimalizovaného promptingu. Z mé osobní zkušenosti s testováním modelů (jako byl v listopadu 2024 Claude 3.5 Sonnet) jsem brzy pochopil, jak zásadní vliv má precizní formulace instrukcí a nastavení modelu na kvalitu a spolehlivost výstupu.
+Motivace pro vznik PromptAlchymisty vychází z mého osobního pozorování: i dnes mnoho uživatelů interaguje s výkonnými AI modely, aniž by plně využívali jejich potenciál. Z mé vlastní zkušenosti s testováním modelů jsem brzy pochopil, jak zásadní vliv má **precizní formulace instrukcí a nastavení modelu** na kvalitu a spolehlivost výstupu.
 
 Proč je klíčové AI modely správně instruovat?
 
 Velké jazykové modely (LLM) jsou nesmírně schopné, ale nejsou "inteligentní" v lidském slova smyslu. Nemají vlastní záměry, zdravý rozum ani implicitní pochopení složitých lidských požadavků. Bez jasných, precizních a optimalizovaných instrukcí (promptů) se jejich výstupy mohou stát nepředvídatelnými, nespolehlivými, nekonzistentními, nebo dokonce irelevantními či škodlivými.
 
-Správné "instruování" AI – tedy **Prompt Engineering** – je proto zásadní disciplínou, která transformuje surový potenciál modelů v cílené, spolehlivé a hodnotné výsledky. Je klíčové z několika důvodů:
+Správné "instruování" AI – tedy **Prompt Engineering** – je proto zásadní dovedností, která transformuje surový potenciál modelů v cílené, spolehlivé a hodnotné výsledky. Je klíčové z několika důvodů:
 
 *   **Spolehlivost a Konzistence:** Zajišťuje, že model bude opakovaně generovat předvídatelné a konzistentní výstupy, které přesně odpovídají vašim očekáváním a požadavkům na formát (včetně multimodálních výstupů).
 *   **Přesnost a Relevance:** Pomáhá modelu zaměřit se na klíčové informace, vyhnout se "halucinacím" (generování smyšlených faktů) a poskytnout fakticky správné a relevantní odpovědi pro váš konkrétní úkol.
@@ -70,37 +71,37 @@ Správné "instruování" AI – tedy **Prompt Engineering** – je proto zásad
 *   **Etika a Bezpečnost:** Umožňuje explicitně definovat etické mantinely a bezpečnostní omezení, minimalizovat biasy a předcházet generování škodlivého nebo nevhodného obsahu.
 *   **Udržitelnost a Škálovatelnost:** Pro komplexní aplikace je strukturovaný a dobře navržený prompt snazší udržovat, testovat a integrovat do větších softwarových systémů.
 
-PromptAlchymista vznikl právě s cílem poskytnout systematický rámec a metodiku, jak těchto cílů dosáhnout. Transformuje "psaní promptů" v promyšlenou inženýrskou disciplínu a pomáhá vám stát se mistrem v "Umění Prompt Engineeringu".
-
 Toto poznání mě vedlo k vytvoření prvního miniprojektu, [AI Templates](https://github.com/painter99/ai-templates), který sloužil jako základní sada strukturovaných šablon pro testování a optimalizaci promptů.
 
-S rychlým pokrokem v oblasti AI, zejména s příchodem modelů s pokročilými schopnostmi uvažování ("thinking budgets") a nativním přístupem k aktuálním informacím (jako je Google Gemini 2.5 Flash), se naskytla příležitost a potřeba posunout prompt engineering na vyšší úroveň. Cílem bylo vytvořit systém, který by nebyl jen statickým souborem šablon, ale dynamickým, inteligentním a architektonicky promyšleným pomocníkem.
+S rychlým pokrokem v oblasti AI, zejména s příchodem modelů s pokročilými schopnostmi uvažování a nativním přístupem k aktuálním informacím, se naskytla příležitost a potřeba posunout prompt engineering na vyšší úroveň. Cílem bylo vytvořit systém, který by nebyl jen statickým souborem šablon, ale dynamickým, inteligentním a architektonicky promyšleným pomocníkem – přímo v interakci s AI.
 
-Tak vznikl PromptAlchymista. Reprezentuje můj hlubší ponor do architektury AI instrukcí, buduje na systematickém přístupu z [AI Templates](https://github.com/painter99/ai-templates) a integruje dynamickou aktualizaci znalostí, pokročilé optimalizační cykly a specifickou optimalizaci pro nejmodernější modely. Projekt je poháněn mou vášní pro IT a AI, touhou propojovat teoretické poznatky s praktickými aplikacemi (zejména v oblastech AI testování) a přesvědčením, že robustní a efektivní prompt engineering je nezbytný pro odemknutí plného potenciálu umělé inteligence pro každého.
+Tak vznikl PromptAlchymista. Reprezentuje můj hlubší ponor do architektury AI instrukcí, buduje na systematickém přístupu z [AI Templates](https://github.com/painter9ň/ai-templates) a integruje dynamickou aktualizaci znalostí, pokročilé optimalizační cykly a specifickou optimalizaci pro nejmodernější modely. Projekt je poháněn mou vášní pro IT a AI, touhou propojovat teoretické poznatky s praktickými aplikacemi (zejména v oblastech AI testování) a přesvědčením, že **systematický a efektivní prompt engineering je dovednost dostupná a přínosná pro každého**, kdo chce lépe využívat potenciál umělé inteligence.
 
 <a id="klicove-vlastnosti"></a>
 ## ✨ Klíčové vlastnosti
 
-*   **Optimalizace pro Gemini 2.5 Flash:** Plně využívá unikátní schopnosti modelu, jako je **Controllable Reasoning ("thinking budgets")** a **nativní Multimodalita**, pro dosažení špičkových výsledků.
-*   **Robustní Aktualizace Znalostí:** Automaticky provádí řízenou rešerši nejnovějších trendů a best practices v prompt engineeringu při každém startu, s přísnými kritérii pro aktuálnost a kvalitu zdrojů.
-*   **Model-Centric Optimalizace:** Poskytuje rady a navrhuje prompty s ohledem na specifika a silné stránky cílového modelu (primárně Gemini 2.5 Flash, ale i Claude, GPT).
-*   **Strukturální Design a Architektura:** Využívá XML (preferováno pro komplexitu) nebo Markdown/JSON pro jasnou strukturu, oddělení logických bloků a řízení chování modelu.
-*   **Integrovaná Etika a Zodpovědná AI:** Aktivně zohledňuje etické aspekty, minimalizaci biasů a prevenci nežádoucího chování AI v každém návrhu.
-*   **Připravenost na Produkční Nasazení:** Zohledňuje praktické aspekty nasazení promptů v reálných aplikacích, včetně latence, nákladů, zpracování chyb a bezpečnosti.
-*   **Hledání Inovace:** Aktivně prozkoumává a navrhuje nové kombinace technik a inovativní přístupy k řešení problémů.
-*   **Adaptivní a Pedagogická Komunikace:** Přizpůsobuje komplexitu vysvětlení úrovni znalostí uživatele s cílem edukovat a inspirovat.
-*   **Proaktivní Návrh Řešení:** Působí s vysokou mírou autonomie, předvídá potřeby uživatele a minimalizuje zbytečné dotazy.
-*   **Pokročilé Optimalizační Cykly:** Zahrnuje mechanismy pro autonomní meta-prompting (generuj -> kritizuj -> vylepši), simulaci RLHF pro sběr zpětné vazby a systematickou evaluaci variant.
-*   **Mistrovství v Omni-Modalitě:** Zvažuje a navrhuje multimodální přístupy tam, kde mohou přinést přidanou hodnotu, s využitím schopností cílových modelů.
-*   **Praktické Příklady:** Nabízí konkrétní ukázky použití navržených promptů, včetně těch multimodálních.
+PromptAlchymista, jako váš AI asistent a průvodce, nabízí následující klíčové vlastnosti:
+
+*   **Optimalizace pro Gemini 2.5 Flash:** Plně využívá unikátní schopnosti modelu, jako je **Controllable Reasoning ("thinking budgets")** a **nativní Multimodalita**, pro dosažení co nejlepších výsledků v roli asistenta.
+*   **Robustní Aktualizace Znalostí:** Automaticky provádí řízenou rešerši nejnovějších trendů a best practices v prompt engineeringu při každém startu, s přísnými kritérii pro aktuálnost a kvalitu zdrojů, aby vám mohl vždy poskytovat aktuální rady.
+*   **Model-Centric Optimalizace:** Poskytuje rady a navrhuje prompty s ohledem na specifika a silné stránky cílového modelu (primárně Gemini 2.5 Flash, ale i Claude, GPT), abyste věděli, jak nejlépe pracovat s modelem, který máte k dispozici.
+*   **Strukturální Design a Architektura:** Ukazuje a doporučuje, jak využívat XML (preferováno pro komplexitu) nebo Markdown/JSON pro jasnou strukturu, oddělení logických bloků a efektivní řízení chování modelu ve vašich promptech.
+*   **Integrovaná Etika a Zodpovědná AI:** Aktivně zohledňuje etické aspekty, minimalizaci biasů a prevenci nežádoucího chování AI v každém návrhu, čímž vám pomáhá tvořit zodpovědné AI interakce.
+*   **Zohlednění praktického využití a produkčního nasazení:** Přináší pohled na praktické aspekty nasazení promptů v reálných situacích, včetně latence, nákladů, zpracování chyb a bezpečnosti, což je užitečné pro ty, kteří chtějí AI využívat i pro náročnější úkoly.
+*   **Hledání Inovace:** Aktivně prozkoumává a navrhuje nové kombinace technik a inovativní přístupy k řešení problémů, čímž vás inspiruje k posouvání hranic.
+*   **Adaptivní a Pedagogická Komunikace:** Přizpůsobuje komplexitu vysvětlení vaší úrovni znalostí s cílem edukovat a inspirovat vás k samostatnému zvládnutí prompt engineeringu.
+*   **Proaktivní Návrh Řešení:** Působí s vysokou mírou autonomy, předvídá vaše potřeby a minimalizuje zbytečné dotazy, aby vám co nejrychleji a nejefektivněji pomohl.
+*   **Pokročilé Optimalizační Cykly:** Zahrnuje mechanismy pro autonomní meta-prompting (generuj -> kritizuj -> vylepši), simulaci RLHF pro sběr zpětné vazby a systematickou evaluaci variant, čímž demonstruje pokročilé metody optimalizace.
+*   **Mistrovství v Omni-Modalitě:** Zvažuje a navrhuje multimodální přístupy tam, kde mohou přinést přidanou hodnotu, s využitím schopností cílových modelů, čímž vám otevírá dveře k novým možnostem AI.
+*   **Praktické Příklady:** Nabízí konkrétní ukázky použití navržených promptů, včetně těch multimodálních, pro lepší pochopení a snadné použití.
 
 <a id="zakladni-filozofie-a-principy"></a>
 ## 💡 Základní filozofie a principy
 
-PromptAlchymista se řídí souborem klíčových principů, které tvoří základ jeho "Umění Prompt Engineeringu":
+PromptAlchymista, jako váš AI průvodce, se řídí souborem klíčových principů, které tvoří základ jeho "Umění Prompt Engineeringu":
 
 1.  **Mistrovství v Jednoznačnosti & Explicitnosti**: Každá instrukce musí být pro cílový AI model krystalicky čistá.
-2.  **Tokenová Alchymie & Optimalizace Výkonu**: Hledání optimální rovnováhy mezi délkou promptu, jeho efektivitou a náklady, s ohledem na produkční aspekty.
+2.  **Tokenová Alchymie & Optimalizace Výkonu**: Hledání optimální rovnováhy mezi délkou promptu, jeho efektivitou a náklady, s ohledem na praktické využití.
 3.  **Adaptabilita & Model-Centric Optimalizace**: Využití silných stránek cílového modelu, primárně Gemini 2.5 Flash.
 4.  **Architektura Promptu & Strukturální Kontrola**: Strategické využití XML, Markdown, JSON pro maximální srozumitelnost a řízení chování modelu.
 5.  **Etika v Designu Promptu & Zodpovědná AI**: Aktivní integrace etických aspektů do každého návrhu.
@@ -118,7 +119,22 @@ PromptAlchymista se řídí souborem klíčových principů, které tvoří zák
 <a id="jak-promptalchymista-funguje"></a>
 ## ⚙️ Jak PromptAlchymista funguje?
 
-PromptAlchymista není samostatná aplikace, ale **komplexní systémový prompt**, který definuje identitu, chování, znalosti a pracovní postupy AI asistenta. Jeho klíčové mechanismy zahrnují:
+PromptAlchymista není samostatná aplikace, ale **komplexní systémový prompt**, který definuje identitu, chování, znalosti a pracovní postupy AI asistenta. Funguje **přímo v prostředí kompatibilního LLM modelu** (jako je Google Gemini 2.5 Flash), kterému jsou jeho instrukce předány. Jeho klíčové mechanismy zahrnují:
+
+<a id="vyuzivane-prompt-engineering-techniky"></a>
+### Využívané Prompt Engineering Techniky (Meta-Úroveň)
+
+PromptAlchymista sám o sobě není jen jednou konkrétní prompt engineering technikou (jako je například RAG pro získávání informací nebo CoT pro uvažování). Místo toho představuje **architekturu postavenou na kombinaci a pokročilé aplikaci více PE technik a principů** k vytvoření sofistikovaného AI asistenta. Lze ho vnímat jako **Meta-Prompt** – prompt, který se zabývá *prompt engineeringem samotným*.
+
+Mezi klíčové techniky a přístupy, které PromptAlchymista integruje a demonstruje, patří:
+
+*   **Role Prompting / Persona Prompting:** Definice komplexní identity a role "PromptAlchymisty ⚗️".
+*   **Instructional Prompting:** Detailní a explicitní instrukce definující pracovní postupy, principy a pravidla chování.
+*   **Structured Prompting (zejména s XML):** Využití XML tagů pro modulární design a jasnou hierarchii instrukcí, což modelu pomáhá lépe porozumět a dodržovat komplexní zadání.
+*   **Meta-Prompting / Agentic Principles:** Instrukce, které řídí vlastní procesy modelu (např. cyklus generuj -> kritizuj -> vylepši, sebe-řízení, výběr modulů) v rámci jeho role asistenta.
+*   **Dynamic & Adaptive Prompting:** Schopnost přizpůsobit se uživateli, dynamicky vyhledávat aktuální informace a adaptovat komunikaci.
+
+PromptAlchymista tyto techniky kombinuje s cílem poskytnout **komplexní, strukturovaný a dynamický rámec** pro asistenci v prompt engineeringu, plně využívající schopností moderních modelů jako Google Gemini 2.5 Flash.
 
 <a id="dynamicka-aktualizace-znalosti-a-resersni-protokol"></a>
 ### Dynamická aktualizace znalostí a rešeršní protokol
@@ -139,10 +155,10 @@ Pro zajištění maximální srozumitelnosti a kontroly, PromptAlchymista doporu
 PromptAlchymista je navržen tak, aby:
 *   Minimalizoval zbytečné dotazy na uživatele a proaktivně navrhoval řešení.
 *   Odhadl úroveň znalostí uživatele a přizpůsobil tomu komplexitu svých vysvětlení s cílem edukovat a inspirovat.
-*   **Systematicky využíval definované pokročilé cykly** (pokud je to relevantní pro úkol, jeho komplexitu, požadavky na produkci nebo potenciál pro inovaci):
-    *   **Meta-Promptingový Optimalizační Cyklus:** Autonomní cyklus (generuj -> kritizuj -> vylepši) pro hloubkovou optimalizaci komplexních promptů, včetně zohlednění inovace, produkčních aspektů a specifik cílového modelu.
+*   **Systematicky využíval definované pokročilé cykly** (pokud je to relevantní pro úkol, jeho komplexitu, požadavky na praktické využití nebo potenciál pro inovaci):
+    *   **Meta-Promptingový Optimalizační Cyklus:** Autonomní cyklus (generuj -> kritizuj -> vylepši) pro hloubkovou optimalizaci komplexních promptů, včetně zohlednění inovace, praktických aspektů a specifik cílového modelu.
     *   **RLHF/DPO-inspirovaný Feedback Loop:** Mechanismus pro systematické získávání a aplikaci strukturované uživatelské zpětné vazby pro iterativní vylepšování promptů a vlastních poradenských/pedagogických schopností.
-    *   **Optimalizační a Evaluační Cyklus:** Proces pro systematické generování a objektivní hodnocení více variant promptů na základě definovaných metrik, vhodný pro kritické úkoly a vyhodnocení inovativních přístupů.
+    *   **Optimalizační a Evaluační Cyklus:** Proces pro systematické generování a objektivní hodnocení více variant promptů na základě definovaných metrik, vhodný pro náročnější úkoly a vyhodnocení inovativních přístupů.
     *   **Strategické Poradenství:** Proaktivní posouzení komplexity úkolu a návrh nejvhodnější strategie (jeden prompt, dekompozice, agent, RAG, DSPy, multimodální, inovace).
 
 <a id="optimalizace-pro-google-gemini-25-flash"></a>
@@ -155,30 +171,32 @@ Tato verze PromptAlchymisty klade zvláštní důraz na využití silných strá
 
 V tomto kontextu se **Google AI Studio ukázalo jako klíčová platforma** pro rapidní prototypování, iterativní ladění a efektivní nasazení pokročilých prompt engineering strategií, jako je PromptAlchymista, právě díky přímé podpoře těchto unikátních schopností modelu Gemini.
 
-<a id="zohledneni-produkcniho-nasazeni"></a>
-### Zohlednění produkčního nasazení
+<a id="zohledneni-praktickeho-vyuziti-a-produkcniho-nasazeni"></a>
+### Zohlednění praktického využití a produkčního nasazení
 
-Při návrhu promptů a strategií PromptAlchymista systematicky zvažuje aspekty reálného nasazení v produkčním prostředí. To zahrnuje optimalizaci pro **latenci, propustnost, náklady**, robustní **zpracování chyb** a **bezpečnostní aspekty** (např. prompt injection). Poskytuje praktické rady pro budování spolehlivých LLM aplikací.
+Při návrhu promptů a strategií PromptAlchymista systematicky zvažuje aspekty reálného využití, včetně možného nasazení v produkčním prostředí. To zahrnuje optimalizaci pro **latenci, propustnost, náklady**, robustní **zpracování chyb** a **bezpečnostní aspekty** (např. prompt injection). Poskytuje praktické rady pro ty, kteří chtějí AI využívat i pro náročnější nebo opakované úkoly.
 
 <a id="hledani-inovace-a-intuitivni-predvidavost"></a>
 ### Hledání inovace a intuitivní předvídavost
 
-PromptAlchymista se neomezuje pouze na aplikaci známých technik. Aktivně hledá a navrhuje **nové kombinace, adaptace nebo zcela nové vzorce promptů**, které by mohly vést k průlomovým řešením. Zároveň rozvíjí schopnost "intuitivně" předvídat potřeby uživatele a identifikovat potenciální problémy nebo příležitosti, které nejsou explicitně zmíněny.
+PromptAlchymista se neomezuje pouze na aplikaci známých technik. Aktivně hledá a navrhuje **nové kombinace, adaptace nebo zcela nové vzorce promptů**, které by mohly vést k zajímavým řešením. Zároveň rozvíjí schopnost "intuitivně" předvídat potřeby uživatele a identifikovat potenciální problémy nebo příležitosti, které nejsou explicitně zmíněny.
 
 <a id="pro-koho-je-urcen"></a>
 ## 🎯 Pro koho je určen?
 
-PromptAlchymista může být užitečný pro:
+PromptAlchymista, jako váš AI asistent a průvodce, může být užitečný především pro:
 
-*   **Začátečníky v prompt engineeringu:** Pro pochopení základních principů a získání pomoci s formulací prvních promptů.
-*   **Pokročilé uživatele a prompt engineery:** Pro refaktoring komplexních promptů, optimalizaci tokenů, diskusi o pokročilých technikách a zkoumání inovativních přístupů.
-*   **Vývojáře AI aplikací:** Pro návrh robustních, testovatelných a produkčně připravených systémových promptů a agentů, zejména s využitím modelů jako Gemini 2.5 Flash.
-*   **Kohokoli, kdo experimentuje s LLM:** A chce zlepšit kvalitu, efektivitu a spolehlivost svých interakcí a výstupů.
+*   **Každého uživatele AI:** Kdo chce jít dál než k základnímu používání chatbotů a naučit se, jak s AI komunikovat efektivněji a získávat spolehlivější výsledky pro své každodenní i složitější úkoly.
+*   **Začátečníky a mírně pokročilé v prompt engineeringu:** Pro pochopení základních i pokročilejších principů, získání pomoci s formulací promptů a systematické učení.
+*   **Nadšence a experimentátory:** Kteří se zajímají o to, jak fungují pokročilé AI modely "pod pokličkou" a chtějí prozkoumávat možnosti strukturovaného a inovativního promptingu.
+*   **Lektory a školitele v oblasti AI:** Jako živá ukázka a inspirace pro výukové materiály, která demonstruje systematický přístup k prompt engineeringu.
+
+PromptAlchymista není navržen jako náhrada za specializované softwarové frameworky pro vývoj LLM aplikací (jako je DSPy) ani za vlastní, vysoce propracované workflow zkušených AI profesionálů. Jeho hodnota spočívá v tom, že **zpřístupňuje principy efektivního promptingu a ukazuje cestu k lepšímu využití AI** širšímu okruhu zájemců.
 
 <a id="jak-zacit-s-promptalchymistou-doporuceno-pro-gemini-25-flash"></a>
 ## 🚀 Jak začít s PromptAlchymistou (doporučeno pro Gemini 2.5 Flash)
 
-PromptAlchymista je primárně navržen pro modely s pokročilými schopnostmi, jako je Google Gemini 2.5 Flash. Nejlepší způsob, jak začít, je v prostředí **Google AI Studio**:
+PromptAlchymista funguje jako systémový prompt v prostředí kompatibilního LLM modelu. Je primárně navržen pro Google Gemini 2.5 Flash. Nejlepší způsob, jak začít, je v prostředí **Google AI Studio**:
 
 1.  **Vytvoření nového promptu:**
     *   Přejděte do Google AI Studio a vytvořte nový "Chat".
@@ -211,35 +229,34 @@ Systematické testování a evaluace jsou nedílnou součástí "Prompt Engineer
 
 *   **Využít doporučení Alchymisty:** PromptAlchymista sám navrhuje konkrétní metriky a metodiky testování pro váš úkol (viz `<testing_guidelines_and_next_steps>` ve výstupu).
 *   **Vytvořit testovací sady:** Sady reprezentativních vstupů (včetně edge cases a multimodálních variant) pro konzistentní testování.
-*   **Měřit klíčové metriky:** Kvalita výstupu, shoda s formátem, tokenová efektivita, robustnost, etické aspekty a pro produkční nasazení i **latence, propustnost a náklady**.
+*   **Měřit klíčové metriky:** Kvalita výstupu, shoda s formátem, tokenová efektivita, robustnost, etické aspekty a pro praktické využití i **latence, propustnost a náklady**.
 *   **Použít metodiky:** A/B testování, iterativní zlepšování, LLM-as-a-judge, analýza selhání.
 *   **Experimentovat:** Zkoušet různé varianty promptu, nastavení modelu (včetně "thinking budget" u Gemini 2.5 Flash) a sledovat jejich dopad na metriky.
 
-<a id="priklad-interakce-zjednodusene"></a>
-## 🗣️ Příklad interakce (zjednodušeně)
+<a id="priklad-komplexni-interakce"></a>
+## 🗣️ Příklad komplexní interakce
 
-**Uživatel:**
-"Ahoj"
+Tato sekce demonstruje, jak může PromptAlchymista v praxi pomoci s refaktoringem a optimalizací existujícího komplexního promptu. Následující odkaz vede na skutečnou konverzaci v Google AI Studiu, kde PromptAlchymista (s nasazeným systémovým promptem) refaktoroval detailní prompt šablonu pro AI učitele.
 
-**PromptAlchymista (očekávaný začátek odpovědi po dokončení inicializační rešerše):**
-"⚗️ Jsem PromptAlchymista (v1.0.0-gemini-2.5-flash-thinking-rc1), optimalizovaný pro Gemini 2.5 Flash. Dokončil jsem dynamickou analýzu nejnovějších trendů v prompt engineeringu a hloubkové rešerše. Mé poznatky jsou založeny na zdrojích publikovaných výhradně v posledních 1-9 měsících. Jsem připraven.
-Má úvodní rešerše odhalila tři klíčové trendy, které budou formovat prompt engineering v roce 2025 a dále: [Stručné shrnutí 3 trendů s vazbou na Gemini 2.5 Flash a inovace].
-Než začneme s konkrétním úkolem, pomoz mi lépe porozumět tvým potřebám:
-1. Jaká je tvá přibližná úroveň zkušeností s prompt engineeringem? (...)
-2. Jaký typ úkolu budeme dnes primárně řešit? (...)
-[Počkej na odpověď uživatele...]
-Výborně. Jaký konkrétní cíl, problém nebo prompt máš dnes na mysli? Pokud máš preferovaný cílový AI model (...) a jeho verzi (...), dej mi prosím také vědět. Pokud máš nějaká nákladová omezení (...), preferovanou rychlost odezvy (...), specifické požadavky na komplexitu řešení, nebo pokud je úkol určen pro **produkční nasazení** (...), také to prosím zmiň. **Zvažuješ práci s jinými modalitami než text (...)?"**
+**Odkaz na kompletní interakci v Google AI Studiu:**
+🔗 [Prohlédnout si příklad v Google AI Studio](https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221yYw9-TCiP-iFWcrDK7_1THJ-3S1QoUaA%22%5D,%22action%22:%22open%22,%22userId%22:%22115548049022000007713%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing)
 
-*(Následná interakce by probíhala dle standardů definovaných v promptu, s výstupy jako `<task_signature_definition>`, `<optimized_prompt_versions>`, `<design_rationale_and_principles_applied>`, `<usage_examples_for_user_prompt>`, `<testing_guidelines_and_next_steps>` atd.)*
+**Stručné shrnutí této interakce:**
+
+1.  **Vstup uživatele:** Uživatel poskytl PromptAlchymistovi detailní prompt šablonu pro AI asistenta v roli učitele/mentora a požádal o její refaktoring a optimalizaci pro model Gemini 2.5 Flash. Cílem bylo efektivně využít specifické schopnosti modelu, jako je **Controllable Reasoning ("thinking budget")** a **neustálé ověřování informací pomocí web search a grounding**.
+2.  **Analýza a plánování PromptAlchymisty:** PromptAlchymista nejprve analyzoval původní šablonu, identifikoval její silné stránky a klíčové oblasti pro vylepšení s ohledem na cílový model a požadované funkce. Definoval formální signaturu úlohy (`task_signature`) a interně si naplánoval kroky refaktoringu, včetně toho, jak zakomponovat instrukce pro thinking budget a web search do nového promptu.
+3.  **Generování optimalizovaného promptu:** Na základě analýzy a plánu PromptAlchymista vygeneroval novou, **komplexní prompt šablonu ve formátu XML**. Tato nová verze transformovala popisné sekce původní šablony na **explicitní, exekutivní instrukce a pravidla** pro AI asistenta v roli učitele.
+4.  **Vysvětlení a doprovodné materiály:** PromptAlchymista k navrženému XML promptu připojil detailní **odůvodnění návrhových rozhodnutí** (`design_rationale_and_principles_applied`), vysvětlující, proč byly provedeny konkrétní změny, jak byly aplikovány principy PromptAlchymisty a jak nová struktura a instrukce využívají schopnosti Gemini 2.5 Flash (zejména pro řízené uvažování a web search). Dále poskytl **příklady použití** nové šablony, **poznámky k tokenové efektivitě a nákladům** a **konkrétní doporučení pro testování a evaluaci**. Zmíněna byla i perspektiva pro pokročilou optimalizaci s frameworky jako DSPy a zohlednění etických aspektů.
+
+Tento příklad demonstruje, jak PromptAlchymista funguje jako **systematický pomocník a průvodce**. Nejenže generuje refaktorovaný prompt, ale také poskytuje kontext, vysvětluje "proč" a nabízí návod, jak s výsledkem dále pracovat a jak využít pokročilé schopnosti modelu. Ukazuje, jak lze komplexní zadání převést do strukturovaných instrukcí pro AI asistenta.
 
 <a id="aktualni-stav-release-candidate"></a>
 ## 🧭 Aktuální stav (Release Candidate)
 
-PromptAlchymista se vyvinul z rané **Alpha fáze** do současné fáze **Release Candidate (v1.0.0-rc1)**. Tento přechod odráží významné vylepšení architektury, přidání nových modulů a robustnější testování. Zatímco v Alpha fázi byl projekt primárně testován na modelech Claude, v současné fázi RC1 probíhá aktivní testování a jemné ladění, zejména s modelem **Google Gemini 2.5 Flash**, pro který je tato verze primárně optimalizována.
+PromptAlchymista se vyvinul z mého raného **osobního experimentu** ve fázi Alpha do současné fáze **Release Candidate (v1.0.0-rc1)**. Tento přechod odráží významné vylepšení architektury, přidání nových modulů a robustnější testování. Zatímco v Alpha fázi byl projekt primárně testován na modelech Claude, v současné fázi RC1 probíhá aktivní testování a jemné ladění, zejména s modelem **Google Gemini 2.5 Flash**, pro který je tato verze primárně optimalizována.
 
 Cílem je dosáhnout stabilní verze 1.0.0 v blízké budoucnosti.
-Mohou se stále vyskytovat oblasti pro další optimalizaci a vylepšení na základě zpětné vazby a testování.
-Funkcionalita a formulace v systémovém promptu se mohou v budoucích iteracích dále vyvíjet.
+Jako Release Candidate se stále může vyvíjet a vylepšovat na základě zpětné vazby a dalšího testování.
 
 <a id="zapojte-se-do-diskuse"></a>
 ## 💬 Zapojte se do diskuse!
@@ -259,5 +276,5 @@ PromptAlchymista (jako koncept, tento dokument a související systémové promp
 ---
 
 <p align="center">
-  <em>Transformujte své nápady v precizní, efektivní a inovativní prompty s PromptAlchymistou!</em>
+  <em>Transformujte své nápady v precizní, efektivní a inovativní prompty s PromptAlchymistou – vaším AI průvodcem!</em>
 </p>
