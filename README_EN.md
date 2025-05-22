@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <em>Your AI assistant and guide to the world of prompt engineering, designed as a comprehensive system prompt for **Google Gemini 2.5 models (Flash and Pro)**. It helps with the creation, analysis, and optimization of LLM prompts with an emphasis on clarity, efficiency, ethics, and learning new AI possibilities.</em>
+  <em>Your AI assistant and guide to the world of prompt engineering, designed as a comprehensive system prompt for Google Gemini 2.5 models (Flash and Pro). It helps with the creation, analysis, and optimization of LLM prompts with an emphasis on clarity, efficiency, ethics, and learning new AI possibilities.</em>
 </p>
 
 > **⚠️ Language Note:** PromptAlchymista's core system prompts are currently in **Czech**, leading to interactions primarily in Czech. This English README serves as an overview. **Future versions will aim for more universal language handling.**
