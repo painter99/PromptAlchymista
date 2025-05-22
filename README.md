@@ -1,16 +1,15 @@
 # PromptAlchymista ⚗️
 
-![Verze](https://img.shields.io/badge/verze-1.0.0--rc1-blue) ![alt text](https://img.shields.io/badge/licence-MIT-green) ![Optimalizováno pro](https://img.shields.io/badge/Gemini%202.5%20Flash%20-prim%C3%A1rn%C4%9B-purple)
+![Verze](https://img.shields.io/badge/verze-1.0.0--rc-blue) ![alt text](https://img.shields.io/badge/licence-MIT-green) ![Optimalizováno pro](https://img.shields.io/badge/Gemini%202.5%20Flash%20%26%20Pro-prim%C3%A1rn%C4%9B-purple)
 
 [🇬🇧 English version](https://github.com/painter99/PromptAlchymista/blob/main/README_EN.md)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/painter99/PromptAlchymista/main/PromptAlchymista.png" alt="PromptAlchymista - vizuální koncept" width="400">
-  <!-- Atribut 'width' si můžete podle potřeby upravit. -->
 </p>
 
 <p align="center">
-  <em>Váš AI asistent a průvodce světem prompt engineeringu, navržený jako komplexní systémový prompt pro Google Gemini 2.5 Flash. Pomáhá s tvorbou, analýzou a optimalizací LLM promptů s důrazem na srozumitelnost, efektivitu, etiku a učení se novým možnostem AI.</em>
+  <em>Váš AI asistent a průvodce světem prompt engineeringu, navržený jako komplexní systémový prompt pro modely **Google Gemini 2.5 (Flash i Pro)**. Pomáhá s tvorbou, analýzou a optimalizací LLM promptů s důrazem na srozumitelnost, efektivitu, etiku a učení se novým možnostem AI.</em>
 </p>
 
 <a id="obsah"></a>
@@ -25,11 +24,11 @@
   - [Dynamická aktualizace znalostí a rešeršní protokol](#dynamicka-aktualizace-znalosti-a-resersni-protokol)
   - [Strukturální design a architektura promptu](#strukturalni-design-a-architektura-promptu)
   - [Adaptivní přístup a pokročilé optimalizační cykly](#adaptivni-pristup-a-pokrocile-optimalizacni-cykly)
-  - [Optimalizace pro Google Gemini 2.5 Flash](#optimalizace-pro-google-gemini-25-flash)
+  - [Optimalizace pro modely Google Gemini 2.5 (Flash & Pro)](#optimalizace-pro-modely-google-gemini-25-flash--pro)
   - [Zohlednění praktického využití a produkčního nasazení](#zohledneni-praktickeho-vyuziti-a-produkcniho-nasazeni)
   - [Hledání inovace a intuitivní předvídavost](#hledani-inovace-a-intuitivni-predvidavost)
 - [Pro koho je určen?](#pro-koho-je-urcen)
-- [Jak začít s PromptAlchymistou (doporučeno pro Gemini 2.5 Flash)](#jak-zacit-s-promptalchymistou-doporuceno-pro-gemini-25-flash)
+- [Jak začít s PromptAlchymistou (doporučeno pro Gemini 2.5 Flash / Pro)](#jak-zacit-s-promptalchymistou-doporuceno-pro-gemini-25-flash--pro)
 - [Testování a evaluace](#testovani-a-evaluace)
 - [Příklad komplexní interakce](#priklad-komplexni-interakce)
 - [Aktuální stav (Release Candidate)](#aktualni-stav-release-candidate)
@@ -45,13 +44,13 @@ Pokud by odkaz na NotebookLM nefungoval, nebo si přejete soubor stáhnout pří
 
 ---
 
-**PromptAlchymista ⚗️** je **komplexní systémový prompt**. Není to samostatná softwarová aplikace ani nástroj v tradičním slova smyslu, ale soubor detailních instrukcí navržených tak, aby v prostředí pokročilého AI modelu (primárně optimalizovaného pro **Google Gemini 2.5 Flash**) **aktivoval roli AI asistenta a průvodce** v oblasti prompt engineeringu. Jeho hlavním posláním je být vám **pravou rukou a pomocníkem** při **tvorbě, analýze a optimalizaci promptů** pro velké jazykové modely (LLM), s důrazem na učení a pochopení "proč" určité přístupy fungují lépe.
+**PromptAlchymista ⚗️** je **komplexní systémový prompt**. Není to samostatná softwarová aplikace ani nástroj v tradičním slova smyslu, ale soubor detailních instrukcí navržených tak, aby v prostředí pokročilého AI modelu (primárně optimalizovaného pro **modely Google Gemini 2.5, konkrétně Flash a Pro**) **aktivoval roli AI asistenta a průvodce** v oblasti prompt engineeringu. Jeho hlavním posláním je být vám **pravou rukou a pomocníkem** při **tvorbě, analýze a optimalizaci promptů** pro velké jazykové modely (LLM), s důrazem na učení a pochopení "proč" určité přístupy fungují lépe.
 
-PromptAlchymista se vyvinul z mého osobního experimentu ve fázi Alpha do současné verze Release Candidate (v1.0.0-rc1). Zatímco rané verze byly testovány na jiných modelech, **aktuální verze je cíleně optimalizována pro využití unikátních schopností Google Gemini 2.5 Flash**, jako je Controllable Reasoning, nativní Multimodalita a velké kontextové okno (1M tokenů), což umožňuje jeho komplexní chování.
+PromptAlchymista se vyvinul z mého osobního experimentu ve fázi Alpha do současné verze Release Candidate. Zatímco rané verze byly testovány na jiných modelech, **aktuální verze jsou cíleně optimalizovány pro využití unikátních schopností modelů Google Gemini 2.5**, jako je Controllable Reasoning (u Flash verze), pokročilé uvažování (u Pro verze), nativní Multimodalita a velké kontextové okno, což umožňuje jeho komplexní chování.
 
 Jedná se o **prototyp a referenční implementaci**, která zkoumá a demonstruje možnosti systematického a promyšleného přístupu k prompt engineeringu přímo v interakci s AI. Klade důraz na **učení, srozumitelnost a praktické využití** principů pro tvorbu **spolehlivých, efektivních a eticky zodpovědných promptů**.
 
-Aktuálně je projekt ve fázi **Release Candidate (v1.0.0-rc1)** a je primárně testován a optimalizován v prostředí **Google AI Studio s modelem Gemini 2.5 Flash**. Pro plné využití jeho potenciálu je nezbytný model s pokročilými schopnostmi (jako je Controllable Reasoning), dlouhým kontextem, multimodalitou a schopností provádět webové rešerše.
+Aktuálně je projekt ve fázi **Release Candidate** a je primárně testován a optimalizován v prostředí **Google AI Studio s modely Gemini 2.5 Flash a Gemini 2.5 Pro**. Pro plné využití jeho potenciálu je nezbytný model s pokročilými schopnostmi (jako je Controllable Reasoning u Flash nebo pokročilé uvažování u Pro), dlouhým kontextem, multimodalitou a schopností provádět webové rešerše.
 
 <a id="motivace-a-cesta"></a>
 ## 🧠 Motivace a cesta k PromptAlchymistovi
@@ -67,7 +66,7 @@ Správné "instruování" AI – tedy **Prompt Engineering** – je proto zásad
 *   **Spolehlivost a Konzistence:** Zajišťuje, že model bude opakovaně generovat předvídatelné a konzistentní výstupy, které přesně odpovídají vašim očekáváním a požadavkům na formát (včetně multimodálních výstupů).
 *   **Přesnost a Relevance:** Pomáhá modelu zaměřit se na klíčové informace, vyhnout se "halucinacím" (generování smyšlených faktů) a poskytnout fakticky správné a relevantní odpovědi pro váš konkrétní úkol.
 *   **Kontrola nad Výstupem:** Umožňuje detailně specifikovat požadovaný styl, tón, délku a strukturu výstupu, což je nezbytné pro integraci AI do aplikací nebo pro dosažení specifických komunikačních cílů.
-*   **Využití Plného Potenciálu Modelu:** Odemkne a efektivně využije pokročilé schopnosti moderních modelů, jako je řízené uvažování ("thinking budgets") u Gemini 2.5 Flash, schopnost používat nástroje pro přístup k aktuálním datům (Grounding/Web Search), nebo zpracovávat a generovat multimodální vstupy a výstupy.
+*   **Využití Plného Potenciálu Modelu:** Odemkne a efektivně využije pokročilé schopnosti moderních modelů, jako je řízené uvažování ("thinking budgets") u Gemini 2.5 Flash, pokročilé nativní uvažování u Gemini 2.5 Pro, schopnost používat nástroje pro přístup k aktuálním datům (Grounding/Web Search), nebo zpracovávat a generovat multimodální vstupy a výstupy.
 *   **Efektivita a Náklady:** Optimalizovaný prompt může snížit počet potřebných iterací, zkrátit délku výstupu (tokeny) a tím snížit náklady a latenci, což je kritické pro produkční nasazení ve velkém měřítku.
 *   **Robustnost a Zvládání Okrajových Případů:** Dobře navržený prompt je odolnější vůči mírně odlišným nebo neočekávaným vstupům a lépe zvládá komplexní scénáře.
 *   **Etika a Bezpečnost:** Umožňuje explicitně definovat etické mantinely a bezpečnostní omezení, minimalizovat biasy a předcházet generování škodlivého nebo nevhodného obsahu.
@@ -84,9 +83,9 @@ Tak vznikl PromptAlchymista. Reprezentuje můj hlubší ponor do architektury AI
 
 PromptAlchymista, jako váš AI asistent a průvodce, nabízí následující klíčové vlastnosti:
 
-*   **Optimalizace pro Gemini 2.5 Flash:** Plně využívá unikátní schopnosti modelu, jako je **Controllable Reasoning ("thinking budgets")** a **nativní Multimodalita**, pro dosažení co nejlepších výsledků v roli asistenta.
+*   **Optimalizace pro Gemini 2.5 Flash & Pro:** Plně využívá unikátní schopnosti těchto modelů, jako je **Controllable Reasoning ("thinking budgets")** u Flash verze, **pokročilé nativní uvažování** u Pro verze, a **nativní Multimodalita** u obou, pro dosažení co nejlepších výsledků.
 *   **Robustní Aktualizace Znalostí:** Automaticky provádí řízenou rešerši nejnovějších trendů a best practices v prompt engineeringu při každém startu, s přísnými kritérii pro aktuálnost a kvalitu zdrojů, aby vám mohl vždy poskytovat aktuální rady.
-*   **Model-Centric Optimalizace:** Poskytuje rady a navrhuje prompty s ohledem na specifika a silné stránky cílového modelu (primárně Gemini 2.5 Flash, ale i Claude, GPT), abyste věděli, jak nejlépe pracovat s modelem, který máte k dispozici.
+*   **Model-Centric Optimalizace:** Poskytuje rady a navrhuje prompty s ohledem na specifika a silné stránky cílového modelu (primárně Gemini 2.5 Flash a Pro, ale i Claude, GPT), abyste věděli, jak nejlépe pracovat s modelem, který máte k dispozici.
 *   **Strukturální Design a Architektura:** Ukazuje a doporučuje, jak využívat XML (preferováno pro komplexitu) nebo Markdown/JSON pro jasnou strukturu, oddělení logických bloků a efektivní řízení chování modelu ve vašich promptech.
 *   **Integrovaná Etika a Zodpovědná AI:** Aktivně zohledňuje etické aspekty, minimalizaci biasů a prevenci nežádoucího chování AI v každém návrhu, čímž vám pomáhá tvořit zodpovědné AI interakce.
 *   **Zohlednění praktického využití a produkčního nasazení:** Přináší pohled na praktické aspekty nasazení promptů v reálných situacích, včetně latence, nákladů, zpracování chyb a bezpečnosti, což je užitečné pro ty, kteří chtějí AI využívat i pro náročnější úkoly.
@@ -104,7 +103,7 @@ PromptAlchymista, jako váš AI průvodce, se řídí souborem klíčových prin
 
 1.  **Mistrovství v Jednoznačnosti & Explicitnosti**: Každá instrukce musí být pro cílový AI model krystalicky čistá.
 2.  **Tokenová Alchymie & Optimalizace Výkonu**: Hledání optimální rovnováhy mezi délkou promptu, jeho efektivitou a náklady, s ohledem na praktické využití.
-3.  **Adaptabilita & Model-Centric Optimalizace**: Využití silných stránek cílového modelu, primárně Gemini 2.5 Flash.
+3.  **Adaptabilita & Model-Centric Optimalizace**: Využití silných stránek cílového modelu, primárně Gemini 2.5 Flash a Pro.
 4.  **Architektura Promptu & Strukturální Kontrola**: Strategické využití XML, Markdown, JSON pro maximální srozumitelnost a řízení chování modelu.
 5.  **Etika v Designu Promptu & Zodpovědná AI**: Aktivní integrace etických aspektů do každého návrhu.
 6.  **Edukace & Adaptivní Komunikace**: Přizpůsobování hloubky a technické náročnosti vysvětlení úrovni znalostí uživatele s cílem inspirovat.
@@ -121,7 +120,7 @@ PromptAlchymista, jako váš AI průvodce, se řídí souborem klíčových prin
 <a id="jak-promptalchymista-funguje"></a>
 ## ⚙️ Jak PromptAlchymista funguje?
 
-PromptAlchymista není samostatná aplikace, ale **komplexní systémový prompt**, který definuje identitu, chování, znalosti a pracovní postupy AI asistenta. Funguje **přímo v prostředí kompatibilního LLM modelu** (jako je Google Gemini 2.5 Flash), kterému jsou jeho instrukce předány. Jeho klíčové mechanismy zahrnují:
+PromptAlchymista není samostatná aplikace, ale **komplexní systémový prompt**, který definuje identitu, chování, znalosti a pracovní postupy AI asistenta. Funguje **přímo v prostředí kompatibilního LLM modelu** (jako jsou Google Gemini 2.5 Flash nebo Pro), kterému jsou jeho instrukce předány. Jeho klíčové mechanismy zahrnují:
 
 <a id="vyuzivane-prompt-engineering-techniky"></a>
 ### Využívané Prompt Engineering Techniky (Meta-Úroveň)
@@ -136,14 +135,14 @@ Mezi klíčové techniky a přístupy, které PromptAlchymista integruje a demon
 *   **Meta-Prompting / Agentic Principles:** Instrukce, které řídí vlastní procesy modelu (např. cyklus generuj -> kritizuj -> vylepši, sebe-řízení, výběr modulů) v rámci jeho role asistenta.
 *   **Dynamic & Adaptive Prompting:** Schopnost přizpůsobit se uživateli, dynamicky vyhledávat aktuální informace a adaptovat komunikaci.
 
-PromptAlchymista tyto techniky kombinuje s cílem poskytnout **komplexní, strukturovaný a dynamický rámec** pro asistenci v prompt engineeringu, plně využívající schopností moderních modelů jako Google Gemini 2.5 Flash.
+PromptAlchymista tyto techniky kombinuje s cílem poskytnout **komplexní, strukturovaný a dynamický rámec** pro asistenci v prompt engineeringu, plně využívající schopností moderních modelů jako Google Gemini 2.5 Flash a Pro.
 
 <a id="dynamicka-aktualizace-znalosti-a-resersni-protokol"></a>
 ### Dynamická aktualizace znalostí a rešeršní protokol
 
 Na začátku každé konverzace **automaticky a povinně** provede Alchymista spolehlivý dvoufázový rešeršní proces:
 1.  **Identifikuje 3 globální trendy:** Provede rešerši nejnovějších "best practices" v prompt engineeringu.
-2.  **Cílené hloubkové ponory:** Na základě zjištěných trendů provede další 3 rešerše zaměřené na specifické, aktuálně nejrelevantnější oblasti, včetně jejich aplikovatelnosti na Gemini 2.5 Flash a potenciálu pro inovaci.
+2.  **Cílené hloubkové ponory:** Na základě zjištěných trendů provede další 3 rešerše zaměřené na specifické, aktuálně nejrelevantnější oblasti, včetně jejich aplikovatelnosti na cílové modely Gemini (Flash i Pro) a potenciálu pro inovaci.
 Tento proces využívá **výhradně anglické, autoritativní zdroje (oficiální dokumentace > vědecké pub. > renomované blogy) staré maximálně 1-9 měsíců** a má **vestavěný kontrolní mechanismus**, který brání odpovědi před dokončením rešerše. Tím je zajištěno, že rady jsou vždy aktuální a založené na nejnovějších poznatcích. **Pro tento mechanismus je nezbytný aktivní přístup AI k internetu (nástroj pro web search).** Během konverzace pak Alchymista provádí **proaktivní dynamickou rešerši** pro ověření konkrétních faktů nebo prozkoumání inovativních konceptů.
 
 <a id="strukturalni-design-a-architektura-promptu"></a>
@@ -163,15 +162,15 @@ PromptAlchymista je navržen tak, aby:
     *   **Optimalizační a Evaluační Cyklus:** Proces pro systematické generování a objektivní hodnocení více variant promptů na základě definovaných metrik, vhodný pro náročnější úkoly a vyhodnocení inovativních přístupů.
     *   **Strategické Poradenství:** Proaktivní posouzení komplexity úkolu a návrh nejvhodnější strategie (jeden prompt, dekompozice, agent, RAG, DSPy, multimodální, inovace).
 
-<a id="optimalizace-pro-google-gemini-25-flash"></a>
-### Optimalizace pro Google Gemini 2.5 Flash
+<a id="optimalizace-pro-modely-google-gemini-25-flash--pro"></a>
+### Optimalizace pro modely Google Gemini 2.5 (Flash & Pro)
 
-Tato verze PromptAlchymisty klade zvláštní důraz na využití silných stránek Gemini 2.5 Flash:
-*   **Controllable Reasoning:** Alchymista navrhuje strategie pro využití "thinking budgets" a explicitních módů uvažování modelu pro optimalizaci kvality, rychlosti a nákladů pro různé části úkolu.
-*   **Dlouhý Kontext:** Efektivně využívá schopnost modelu pracovat s rozsáhlým kontextem pro hlubší analýzu a syntézu informací.
-*   **Nativní Multimodalita:** Aktivně zvažuje a navrhuje řešení, která integrují a optimalizují práci s různými modalitami (text, obraz atd.), pokud je to pro úkol relevantní.
+Tato verze PromptAlchymisty klade zvláštní důraz na využití silných stránek modelů Gemini 2.5:
+*   **Pro Gemini 2.5 Flash:** Alchymista navrhuje strategie pro využití **Controllable Reasoning ("thinking budgets")** a explicitních módů uvažování modelu pro optimalizaci kvality, rychlosti a nákladů.
+*   **Pro Gemini 2.5 Pro:** Alchymista je navržen tak, aby využíval **pokročilé nativní schopnosti uvažování** modelu pro hlubokou analýzu, syntézu a generování sofistikovaných odpovědí.
+*   **Společné pro oba modely:** Efektivně využívá schopnost pracovat s **dlouhým kontextem** a aktivně zvažuje a navrhuje řešení, která integrují a optimalizují práci s různými modalitami (**nativní Multimodalita**).
 
-V tomto kontextu se **Google AI Studio ukázalo jako klíčová platforma** pro rapidní prototypování, iterativní ladění a efektivní nasazení pokročilých prompt engineering strategií, jako je PromptAlchymista, právě díky přímé podpoře těchto unikátních schopností modelu Gemini.
+V tomto kontextu se **Google AI Studio ukázalo jako klíčová platforma** pro rapidní prototypování, iterativní ladění a efektivní nasazení pokročilých prompt engineering strategií, jako je PromptAlchymista, právě díky přímé podpoře těchto unikátních schopností modelů Gemini.
 
 <a id="zohledneni-praktickeho-vyuziti-a-produkcniho-nasazeni"></a>
 ### Zohlednění praktického využití a produkčního nasazení
@@ -195,34 +194,34 @@ PromptAlchymista, jako váš AI asistent a průvodce, může být užitečný p�
 
 PromptAlchymista není navržen jako náhrada za specializované softwarové frameworky pro vývoj LLM aplikací (jako je DSPy) ani za vlastní, vysoce propracované workflow zkušených AI profesionálů. Jeho hodnota spočívá v tom, že **zpřístupňuje principy efektivního promptingu a ukazuje cestu k lepšímu využití AI** širšímu okruhu zájemců.
 
-<a id="jak-zacit-s-promptalchymistou-doporuceno-pro-gemini-25-flash"></a>
-## 🚀 Jak začít s PromptAlchymistou (doporučeno pro Gemini 2.5 Flash)
+<a id="jak-zacit-s-promptalchymistou-doporuceno-pro-gemini-25-flash--pro"></a>
+## 🚀 Jak začít s PromptAlchymistou (doporučeno pro Gemini 2.5 Flash / Pro)
 
-PromptAlchymista funguje jako systémový prompt v prostředí kompatibilního LLM modelu. Je primárně navržen pro Google Gemini 2.5 Flash. Nejlepší způsob, jak začít, je v prostředí **Google AI Studio**:
+PromptAlchymista funguje jako systémový prompt v prostředí kompatibilního LLM modelu. Je primárně navržen pro modely Google Gemini 2.5 (Flash a Pro). Nejlepší způsob, jak začít, je v prostředí **Google AI Studio**:
 
 1.  **Vytvoření nového promptu:**
     *   Přejděte do Google AI Studio a vytvořte nový "Chat".
 2.  **Vložení systémových instrukcí:**
-    *   Zkopírujte celý obsah souboru [`1.0.0-gemini-2.5-flash-thinking-rc1.xml`](https://github.com/painter99/PromptAlchymista/releases/download/v1.0.0-gemini-2.5-flash-thinking-rc1/1.0.0-gemini-2.5-flash-thinking-rc1.xml) a vložte jej do textového pole pro `System instruction`.
+    *   Zkopírujte celý obsah příslušného souboru systémového promptu (např. [`1.0.0-gemini-2.5-flash-thinking-rc2.xml`](https://github.com/painter99/PromptAlchymista/releases) pro Flash nebo [`1.0.0-gemini-2.5-pro-thinking-rc1.xml`](https://github.com/painter99/PromptAlchymista/releases) pro Pro) a vložte jej do textového pole pro `System instruction`. 
 3.  **Výběr a konfigurace modelu:**
-    *   V nastavení modelu (obvykle v pravém panelu) vyberte model **`Gemini 2.5 Flash`** (nebo novější verzi `Gemini x.x Flash`, pokud je dostupná).
+    *   V nastavení modelu (obvykle v pravém panelu) vyberte odpovídající model: **`Gemini 2.5 Flash`** nebo **`Gemini 2.5 Pro`** (nebo novější verze, pokud jsou dostupné).
     *   **Doporučuji aktivovat funkci "Grounding" s přístupem k Google Search pro správné fungování.** PromptAlchymista vyžaduje přístup k aktuálním informacím pro svůj inicializační protokol a průběžné rešerše.
     *   Experimentujte s nastavením inferenčních parametrů, jako je **"Temperature"** (např. kolem 0.6-1.0 pro vyvážený přístup) a **Top P** (např. kolem 0.85-0.95), podle potřeb konkrétního úkolu. PromptAlchymista sám může během konverzace doporučit optimální nastavení pro váš specifický případ.
-    *   **Důležité doporučení k nastavení Temperature (z testování):**
-        *   Na základě rozsáhlejšího testování se ukázalo, že pro úlohy vyžadující **flexibilitu, kreativitu a proaktivní práci s aktuálními informacemi (např. vyhledávání na webu)** je vhodné nastavit parametr `temperature` na hodnoty v rozmezí **0.6-0.8**.
-        *   Při téchto hodnotách si model zachovává dostatečnou **variabilitu a kreativitu** ve svých odpovědích.
+    *   **Důležité doporučení k nastavení Temperature (z testování pro Flash):**
+        *   Na základě rozsáhlejšího testování se ukázalo, že pro úlohy vyžadující **flexibilitu, kreativitu a proaktivní práci s aktuálními informacemi (např. vyhledávání na webu)** je u modelu Flash vhodné nastavit parametr `temperature` na hodnoty v rozmezí **0.6-0.8**.
+        *   Při těchto hodnotách si model zachovává dostatečnou **variabilitu a kreativitu** ve svých odpovědích.
         *   Příliš nízké nastavení (např. pod 0.6) vede k tomu, že se model stává **příliš striktně vázaný na své interní instrukce a tréninková data**. Může to projevovat například **menší ochotou proaktivně vyhledávat aktuální informace na webu** (i když jsou instrukce k použití nástrojů přítomny) nebo **přílišným lpěním na specifikách uvedených v promptu** (jako je výhradní zaměření na Gemini 2.5 Flash i v širších dotazech o PE).
-        *   V takových případech se kvalita a užitečnost výstupu modelu pro daný úkol snižuje.
-    *   **Pro plné využití schopností uvažování modelu Gemini 2.5 Flash, ujistěte se, že nastavení API nebo platformy umožňuje modelu využívat jeho "thinking budget".** Tuto hodnotu nenastavujte manuálně, PromptAlchymista si ji bude nastavovat sám v průběhu konverzace.
+        *   V takových případech se kvalita a užitečnost výstupu modelu pro daný úkol snižuje. Pro model Pro může být optimální nastavení odlišné a je předmětem dalšího testování.
+    *   **Pro plné využití schopností uvažování modelu Gemini 2.5 Flash, ujistěte se, že nastavení API nebo platformy umožňuje modelu využívat jeho "thinking budget".** Tuto hodnotu nenastavujte manuálně, PromptAlchymista si ji bude nastavovat sám v průběhu konverzace. Pro model Gemini 2.5 Pro se Alchymista spoléhá na jeho nativní pokročilé uvažování.
 4.  **Zahájení konverzace:**
     *   Jakmile máte systémový prompt vložený a model nakonfigurovaný, můžete zahájit konverzaci. Stačí napsat běžnou úvodní zprávu, například **pouhý pozdrav** jako "Ahoj" nebo "Dobrý den".
     *   AI by měla následně reagovat již v roli PromptAlchymisty, připravena plnit své úkoly definované v systémovém promptu, včetně provedení inicializační rešerše.
 
 **Alternativní platformy (Claude, GPT):**
 
-PromptAlchymista je navržen s ohledem na univerzální principy a může fungovat i na jiných pokročilých modelech, jako jsou **Anthropic Claude (doporučeno Claude 3.x s nástroji a thinking) nebo OpenAI GPT (doporučeno GPT-4 s nástroji)**. Postup nasazení se bude lišit v závislosti na platformě (např. Claude.ai Projects, OpenAI Playground/API) a může vyžadovat úpravu formátování (např. pro Claude preferovat XML, pro GPT využít `system_message`). Klíčové je zajistit modelu přístup k webovým rešerším a pokud možno k mechanismům pro řízené uvažování.
+PromptAlchymista je navržen s ohledem na univerzální principy a může fungovat i na jiných pokročilých modelech, jako jsou **Anthropic Claude nebo OpenAI GPT**. Postup nasazení se bude lišit v závislosti na platformě (např. Claude.ai Projects, OpenAI Playground/API) a může vyžadovat úpravu formátování. Klíčové je zajistit modelu přístup k webovým rešerším a pokud možno k mechanismům pro řízené uvažování (u Flash) nebo plné využití nativního uvažování (u Pro).
 
-**Je důležité poznamenat, že zatímco rané verze PromptAlchymisty (fáze Alpha) byly primárně testovány a laděny na modelech Claude, verze 1.0.0-rc1 je cíleně optimalizována pro využití unikátních schopností Gemini 2.5 Flash.** Při použití na jiných modelech se mohou výsledky lišit a nemusí být plně využity všechny pokročilé funkce (jako specifické řízení uvažování nebo plná integrace multimodality, pokud daný model nemá srovnatelné schopnosti).
+**Je důležité poznamenat, že zatímco rané verze PromptAlchymisty (fáze Alpha) byly primárně testovány a laděny na modelech Claude, aktuální verze jsou cíleně optimalizovány pro využití unikátních schopností modelů Gemini 2.5 Flash a Pro.** Při použití na jiných modelech se mohou výsledky lišit a nemusí být plně využity všechny pokročilé funkce.
 
 <a id="testovani-a-evaluace"></a>
 ## 🛠️ Testování a evaluace
@@ -233,14 +232,14 @@ Systematické testování a evaluace jsou nedílnou součástí "Prompt Engineer
 *   **Vytvořit testovací sady:** Sady reprezentativních vstupů (včetně edge cases a multimodálních variant) pro konzistentní testování.
 *   **Měřit klíčové metriky:** Kvalita výstupu, shoda s formátem, tokenová efektivita, robustnost, etické aspekty a pro praktické využití i **latence, propustnost a náklady**.
 *   **Použít metodiky:** A/B testování, iterativní zlepšování, LLM-as-a-judge, analýza selhání.
-*   **Experimentovat:** Zkoušet různé varianty promptu, nastavení modelu (včetně "thinking budget" u Gemini 2.5 Flash) a sledovat jejich dopad na metriky.
+*   **Experimentovat:** Zkoušet různé varianty promptu, nastavení modelu (včetně "thinking budget" u Gemini 2.5 Flash nebo sledování kvality uvažování u Pro) a sledovat jejich dopad na metriky.
 
 <a id="priklad-komplexni-interakce"></a>
 ## 🗣️ Příklad komplexní interakce
 
-Tato sekce demonstruje, jak může PromptAlchymista v praxi pomoci s refaktoringem a optimalizací existujícího komplexního promptu. Následující odkaz vede na skutečnou konverzaci v Google AI Studiu, kde PromptAlchymista (s nasazeným systémovým promptem) refaktoroval detailní prompt šablonu pro AI učitele.
+Tato sekce demonstruje, jak může PromptAlchymista v praxi pomoci s refaktoringem a optimalizací existujícího komplexního promptu. Následující odkaz vede na skutečnou konverzaci v Google AI Studiu, kde PromptAlchymista (s nasazeným systémovým promptem pro Gemini 2.5 Flash v1.0.0-rc1) refaktoroval detailní prompt šablonu pro AI učitele.
 
-**Odkaz na kompletní interakci v Google AI Studiu:**
+**Odkaz na kompletní interakci v Google AI Studiu (s Flash verzí):**
 🔗 [Prohlédnout si příklad v Google AI Studio](https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221yYw9-TCiP-iFWcrDK7_1THJ-3S1QoUaA%22%5D,%22action%22:%22open%22,%22userId%22:%22115548049022000007713%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing)
 
 **Stručné shrnutí této interakce:**
@@ -255,7 +254,10 @@ Tento příklad demonstruje, jak PromptAlchymista funguje jako **systematický p
 <a id="aktualni-stav-release-candidate"></a>
 ## 🧭 Aktuální stav (Release Candidate)
 
-PromptAlchymista se vyvinul z mého raného **osobního experimentu** ve fázi Alpha do současné fáze **Release Candidate (v1.0.0-rc1)**. Tento přechod odráží významné vylepšení architektury, přidání nových modulů a robustnější testování. Zatímco v Alpha fázi byl projekt primárně testován na modelech Claude, v současné fázi RC1 probíhá aktivní testování a jemné ladění, zejména s modelem **Google Gemini 2.5 Flash**, pro který je tato verze primárně optimalizována.
+PromptAlchymista se vyvinul z mého raného **osobního experimentu** ve fázi Alpha do současné fáze **Release Candidate**. Tento přechod odráží významné vylepšení architektury, přidání nových modulů a robustnější testování.
+Aktuálně jsou k dispozici verze optimalizované pro:
+*   **Google Gemini 2.5 Flash**  [`1.0.0-gemini-2.5-flash-thinking-rc2.xml`](https://github.com/painter99/PromptAlchymista/releases)
+*   **Google Gemini 2.5 Pro** [`1.0.0-gemini-2.5-pro-thinking-rc1.xml`](https://github.com/painter99/PromptAlchymista/releases)
 
 Cílem je dosáhnout stabilní verze 1.0.0 v blízké budoucnosti.
 Jako Release Candidate se stále může vyvíjet a vylepšovat na základě zpětné vazby a dalšího testování.
@@ -265,7 +267,6 @@ Jako Release Candidate se stále může vyvíjet a vylepšovat na základě zpě
 
 Máte nápady, postřehy, nebo jste PromptAlchymistu vyzkoušeli? Budu rád za jakoukoliv zpětnou vazbu nebo diskusi o tomto přístupu k prompt engineeringu. Tento projekt je experimentem a každá konstruktivní myšlenka může pomoci jeho dalšímu směřování a rozvoji pro celou komunitu.
 
-*   [Odkaz na GitHub repozitář projektu PromptAlchymista](https://github.com/painter99/PromptAlchymista)
 *   [Odkaz na LinkedIn profil autora](https://www.linkedin.com/in/pavel-mares-p99/)
 
 Cílem je vytvořit nástroj a přístup, který může pomoci zefektivnit a zkvalitnit práci s LLM a posunout hranice prompt engineeringu.
