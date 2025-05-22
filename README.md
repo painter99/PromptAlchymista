@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <em>Váš AI asistent a průvodce světem prompt engineeringu, navržený jako komplexní systémový prompt pro modely **Google Gemini 2.5 (Flash i Pro)**. Pomáhá s tvorbou, analýzou a optimalizací LLM promptů s důrazem na srozumitelnost, efektivitu, etiku a učení se novým možnostem AI.</em>
+  <em>Váš AI asistent a průvodce světem prompt engineeringu, navržený jako komplexní systémový prompt pro modely Google Gemini 2.5 (Flash i Pro). Pomáhá s tvorbou, analýzou a optimalizací LLM promptů s důrazem na srozumitelnost, efektivitu, etiku a učení se novým možnostem AI.</em>
 </p>
 
 <a id="obsah"></a>
